@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GH-300 · GitHub Copilot — Guia de Estudo</title>
+<meta name="description" content="Cheat sheet e conteúdo das questões em capítulos para estudo da certificação GitHub Copilot GH-300.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📘</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+      </div>
+      <div class="brand-text">
+        <h1>GitHub Copilot <span>GH-300</span></h1>
+        <p>Guia de estudo · 117 questões · Business &amp; Enterprise</p>
+      </div>
+    </div>
+
+    <nav class="tabs" role="tablist" aria-label="Seções">
+      <button class="tab active" role="tab" data-tab="cheatsheet" aria-selected="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        Cheat Sheet
+      </button>
+      <button class="tab" role="tab" data-tab="capitulos" aria-selected="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+        Capítulos
+      </button>
+    </nav>
+
+    <div class="header-tools">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input id="search" type="search" placeholder="Buscar…" autocomplete="off" aria-label="Buscar conteúdo">
+        <kbd>/</kbd>
+      </div>
+      <button id="btn-print" class="icon-btn" title="Imprimir" aria-label="Imprimir">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ═══════════ ABA: CHEAT SHEET ═══════════ -->
+  <section id="view-cheatsheet" class="view active" role="tabpanel">
+    <div class="view-intro">
+      <h2>Cheat Sheet</h2>
+      <p>Resumo rápido de todos os tópicos do exame, organizado por área. Use para revisão de véspera.</p>
+      <div class="stat-row">
+        <span class="stat"><strong id="stat-topics">0</strong> tópicos</span>
+        <span class="stat"><strong id="stat-facts">0</strong> fatos-chave</span>
+      </div>
+    </div>
+    <div id="cheatsheet-grid" class="cs-grid"></div>
+    <p id="cs-empty" class="empty-msg hidden">Nenhum item encontrado para sua busca.</p>
+  </section>
+
+  <!-- ═══════════ ABA: CAPÍTULOS ═══════════ -->
+  <section id="view-capitulos" class="view" role="tabpanel">
+    <div class="chapters-layout">
+      <aside class="chapter-nav" aria-label="Capítulos">
+        <h3>Capítulos</h3>
+        <ol id="chapter-list"></ol>
+        <div class="nav-progress">
+          <div class="progress-label"><span>Progresso de estudo</span><span id="progress-text">0 / 117</span></div>
+          <div class="progress-bar"><div id="progress-fill"></div></div>
+          <button id="btn-reset" class="btn-ghost">Limpar marcações</button>
+        </div>
+      </aside>
+
+      <div class="chapter-content">
+        <div class="view-intro">
+          <h2>Conteúdo das Questões por Capítulo</h2>
+          <p>As 117 questões do simulado agrupadas por tema, em formato de estudo: enunciado + resposta correta. Marque como estudado para acompanhar seu progresso.</p>
+        </div>
+        <div id="chapters-container"></div>
+        <p id="ch-empty" class="empty-msg hidden">Nenhuma questão encontrada para sua busca.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Material de estudo não oficial para a certificação <strong>GitHub Copilot GH-300</strong> · Conteúdo derivado do simulado com 117 questões.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="cheatsheet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
