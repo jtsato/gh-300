@@ -11,14 +11,12 @@
     speech: {
       mode: 'idle',
       card: null,
-      utterance: null,
+      audio: null,
       paused: false,
       queue: [],
       index: -1,
       runId: 0,
-      pendingTimer: null,
-      voice: null,
-      voiceName: ''
+      pendingTimer: null
     }
   };
 
@@ -152,7 +150,7 @@
             </svg>
             <span data-speech-label>Ouvir questão e respostas</span>
           </button>
-          <button class="q-audio-stop" type="button" data-speech="stop" aria-label="Parar leitura da questão Q${q.n}" disabled>
+          <button class="q-audio-stop" type="button" data-speech="stop" aria-label="Parar áudio da questão Q${q.n}" disabled>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="6" y="6" width="12" height="12"></rect>
             </svg>
@@ -194,7 +192,7 @@
     $$('.view').forEach(view => view.classList.toggle('active', view.id === `view-${target}`));
 
     if (target !== 'capitulos' && state.speech.mode === 'all' && !state.speech.paused) {
-      pauseSpeechPlayback('Leitura pausada. Volte para Capítulos para continuar.');
+      pauseSpeechPlayback('Áudio pausado. Volte para Capítulos para continuar.');
     }
 
     if (shouldScroll) window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -336,21 +334,21 @@
   }
 
   function setupSpeech() {
-    const supported = isSpeechSupported();
+    const supported = isAudioSupported();
     const controls = $$('#btn-speech-all, #btn-speech-all-stop, .q-audio-btn, .q-audio-stop');
 
     if (!supported) {
       controls.forEach(control => {
         control.disabled = true;
-        control.title = 'A leitura de áudio não é compatível com este navegador';
+        control.title = 'A reprodução de áudio não é compatível com este navegador';
       });
-      setGlobalSpeechState('idle', 'Leitura de áudio não compatível com este navegador.');
+      setGlobalSpeechState('idle', 'Reprodução de áudio não compatível com este navegador.');
       return;
     }
 
-    refreshSpeechVoice();
-    window.speechSynthesis.addEventListener?.('voiceschanged', refreshSpeechVoice);
-    setGlobalSpeechState('idle', `Pronto para ler ${QUESTIONS.length} questões.`);
+    const sourceLabel = $('#speech-global-voice');
+    if (sourceLabel) sourceLabel.textContent = 'Áudio profissional';
+    setGlobalSpeechState('idle', `Pronto para ouvir ${QUESTIONS.length} questões.`);
 
     document.addEventListener('click', e => {
       const target = e.target instanceof Element ? e.target : null;
@@ -380,49 +378,11 @@
       toggleSpeech(card);
     });
 
-    window.addEventListener('beforeunload', () => window.speechSynthesis.cancel());
+    window.addEventListener('beforeunload', () => state.speech.audio?.pause());
   }
 
-  function isSpeechSupported() {
-    return 'speechSynthesis' in window &&
-      typeof window.speechSynthesis.speak === 'function' &&
-      typeof window.speechSynthesis.cancel === 'function' &&
-      typeof window.speechSynthesis.getVoices === 'function' &&
-      'SpeechSynthesisUtterance' in window;
-  }
-
-  function refreshSpeechVoice() {
-    const voices = window.speechSynthesis.getVoices();
-    const voice = chooseSpeechVoice(voices);
-    state.speech.voice = voice;
-    state.speech.voiceName = voice?.name || 'padrão do navegador';
-
-    const voiceLabel = $('#speech-global-voice');
-    if (voiceLabel) voiceLabel.textContent = `Voz: ${state.speech.voiceName}`;
-
-    const globalButton = $('#btn-speech-all');
-    if (globalButton) globalButton.title = `Voz selecionada: ${state.speech.voiceName}`;
-  }
-
-  function chooseSpeechVoice(voices) {
-    const brazilianVoices = voices.filter(voice => voice.lang.toLowerCase() === 'pt-br');
-    const portugueseVoices = voices.filter(voice => voice.lang.toLowerCase().startsWith('pt'));
-    const candidates = brazilianVoices.length ? brazilianVoices : portugueseVoices;
-    if (!candidates.length) return null;
-
-    return candidates.slice().sort((a, b) => scoreSpeechVoice(b) - scoreSpeechVoice(a))[0];
-  }
-
-  function scoreSpeechVoice(voice) {
-    const name = voice.name.toLowerCase();
-    let score = voice.lang.toLowerCase() === 'pt-br' ? 100 : 70;
-
-    if (name.includes('google')) score += 100;
-    if (name.includes('brasil') || name.includes('brazil') || name.includes('brazilian')) score += 30;
-    if (name.includes('português') || name.includes('portuguese')) score += 10;
-    if (voice.default) score += 5;
-
-    return score;
+  function isAudioSupported() {
+    return typeof window.Audio === 'function';
   }
 
   function toggleAllSpeech() {
@@ -439,7 +399,7 @@
   }
 
   function startAllSpeech() {
-    if (!isSpeechSupported()) return;
+    if (!isAudioSupported()) return;
 
     stopSpeech();
     state.speech.mode = 'all';
@@ -469,19 +429,13 @@
 
     clearSpeechTimer();
     state.speech.card = card;
-    state.speech.utterance = null;
+    state.speech.audio = null;
     setCurrentSpeechCard(card);
     setSpeechState(card, 'playing');
-    setGlobalSpeechState('playing', `Questão ${question.n} de ${state.speech.queue.length} — preparando leitura.`);
+    setGlobalSpeechState('playing', `Questão ${question.n} de ${state.speech.queue.length} — preparando áudio.`);
 
     if (shouldScroll) scrollToQuestion(card);
-
-    const delay = shouldScroll && !prefersReducedMotion() ? 350 : 0;
-    state.speech.pendingTimer = window.setTimeout(() => {
-      state.speech.pendingTimer = null;
-      if (runId !== state.speech.runId || state.speech.paused) return;
-      startUtterance(card, runId, 'all');
-    }, delay);
+    startAudio(card, runId, 'all');
   }
 
   function getQuestionCard(number) {
@@ -504,15 +458,15 @@
   }
 
   function startSpeech(card) {
-    if (!isSpeechSupported()) return;
+    if (!isAudioSupported()) return;
 
     stopSpeech();
     state.speech.mode = 'single';
     state.speech.card = card;
     state.speech.paused = false;
     setCurrentSpeechCard(card);
-    setGlobalSpeechState('single', `Leitura individual da questão Q${card.dataset.q}.`);
-    startUtterance(card, state.speech.runId, 'single');
+    setGlobalSpeechState('single', `Áudio individual da questão Q${card.dataset.q}.`);
+    startAudio(card, state.speech.runId, 'single');
   }
 
   function toggleSpeech(card) {
@@ -528,7 +482,7 @@
   }
 
   function toggleSpeechPlayback() {
-    if (state.speech.paused || window.speechSynthesis.paused) {
+    if (state.speech.paused) {
       resumeSpeechPlayback();
       return;
     }
@@ -540,20 +494,15 @@
     if (state.speech.mode === 'idle') return;
 
     clearSpeechTimer();
-    if (state.speech.utterance && window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
-      window.speechSynthesis.pause();
-    } else if (state.speech.utterance && !window.speechSynthesis.paused) {
-      state.speech.utterance = null;
-      window.speechSynthesis.cancel();
-    }
+    if (state.speech.audio) state.speech.audio.pause();
 
     state.speech.paused = true;
     if (state.speech.card) setSpeechState(state.speech.card, 'paused');
 
     const question = state.speech.card?.dataset.q;
     const defaultMessage = state.speech.mode === 'all'
-      ? `Questão ${question} de ${state.speech.queue.length} — leitura pausada.`
-      : `Leitura da questão Q${question} pausada.`;
+      ? `Questão ${question} de ${state.speech.queue.length} — áudio pausado.`
+      : `Áudio da questão Q${question} pausado.`;
     setGlobalSpeechState('paused', message || defaultMessage);
   }
 
@@ -568,55 +517,39 @@
     const card = state.speech.card;
     const runId = state.speech.runId;
 
-    if (state.speech.utterance && window.speechSynthesis.paused) {
-      window.speechSynthesis.resume();
-      if (card) setSpeechState(card, 'playing');
-      setGlobalSpeechState('playing');
-      return;
-    }
-
     if (!card) return;
 
-    if (state.speech.utterance && window.speechSynthesis.speaking) {
-      if (card) setSpeechState(card, 'playing');
-      setGlobalSpeechState('playing');
+    if (state.speech.audio) {
+      state.speech.audio.play().catch(() => failSpeech(runId, `Não foi possível continuar o áudio da questão Q${card.dataset.q}.`));
+      setSpeechState(card, 'playing');
+      updateSpeechProgress('playing');
       return;
     }
 
-    startUtterance(card, runId, state.speech.mode);
+    startAudio(card, runId, state.speech.mode);
   }
 
-  function startUtterance(card, runId, mode) {
+  function startAudio(card, runId, mode) {
     if (!isCurrentSpeechSession(card, runId, mode)) return;
 
-    refreshSpeechVoice();
-    const utterance = new SpeechSynthesisUtterance(getSpeechText(card));
-    utterance.voice = state.speech.voice || null;
-    utterance.lang = state.speech.voice?.lang || 'pt-BR';
-    utterance.rate = 0.95;
-    utterance.pitch = 1;
-    utterance.volume = 1;
-    utterance.onstart = () => {
-      if (!isCurrentSpeechUtterance(utterance, card, runId, mode)) return;
+    const number = String(card.dataset.q).padStart(3, '0');
+    const audio = new Audio(`audio/questao-${number}.mp3`);
+    audio.preload = 'auto';
+    audio.onplay = () => {
+      if (!isCurrentSpeechAudio(audio, card, runId, mode)) return;
       state.speech.paused = false;
       setSpeechState(card, 'playing');
       updateSpeechProgress('playing');
     };
-    utterance.onpause = () => {
-      if (!isCurrentSpeechUtterance(utterance, card, runId, mode)) return;
+    audio.onpause = () => {
+      if (!isCurrentSpeechAudio(audio, card, runId, mode) || audio.ended) return;
       state.speech.paused = true;
       setSpeechState(card, 'paused');
       updateSpeechProgress('paused');
     };
-    utterance.onresume = () => {
-      if (!isCurrentSpeechUtterance(utterance, card, runId, mode)) return;
-      state.speech.paused = false;
-      setSpeechState(card, 'playing');
-      updateSpeechProgress('playing');
-    };
-    utterance.onend = () => {
-      if (!isCurrentSpeechUtterance(utterance, card, runId, mode)) return;
-      state.speech.utterance = null;
+    audio.onended = () => {
+      if (!isCurrentSpeechAudio(audio, card, runId, mode)) return;
+      state.speech.audio = null;
       state.speech.paused = false;
 
       if (mode === 'all') {
@@ -627,43 +560,40 @@
         finishSingleSpeech(card, runId);
       }
     };
-    utterance.onerror = event => {
-      if (!isCurrentSpeechUtterance(utterance, card, runId, mode)) return;
-      failSpeech(runId, event.error === 'canceled' || event.error === 'interrupted'
-        ? `A leitura da questão Q${card.dataset.q} foi interrompida.`
-        : `Não foi possível ler a questão Q${card.dataset.q}.`);
+    audio.onerror = () => {
+      if (!isCurrentSpeechAudio(audio, card, runId, mode)) return;
+      failSpeech(runId, `Não foi possível reproduzir o áudio da questão Q${card.dataset.q}.`);
     };
 
-    state.speech.utterance = utterance;
+    state.speech.audio = audio;
     state.speech.paused = false;
     setSpeechState(card, 'playing');
     updateSpeechProgress('playing');
 
-    try {
-      window.speechSynthesis.speak(utterance);
-    } catch (error) {
-      failSpeech(runId, `Não foi possível iniciar a leitura da questão Q${card.dataset.q}.`);
-    }
+    audio.play().catch(() => {
+      if (!isCurrentSpeechAudio(audio, card, runId, mode)) return;
+      failSpeech(runId, `Não foi possível iniciar o áudio da questão Q${card.dataset.q}.`);
+    });
   }
 
   function isCurrentSpeechSession(card, runId, mode) {
     return state.speech.runId === runId && state.speech.mode === mode && state.speech.card === card;
   }
 
-  function isCurrentSpeechUtterance(utterance, card, runId, mode) {
-    return isCurrentSpeechSession(card, runId, mode) && state.speech.utterance === utterance;
+  function isCurrentSpeechAudio(audio, card, runId, mode) {
+    return isCurrentSpeechSession(card, runId, mode) && state.speech.audio === audio;
   }
 
   function finishSingleSpeech(card, runId) {
     if (state.speech.runId !== runId) return;
     state.speech.mode = 'idle';
     state.speech.card = null;
-    state.speech.utterance = null;
+    state.speech.audio = null;
     state.speech.paused = false;
     state.speech.runId += 1;
     setSpeechState(card, 'idle');
     clearCurrentSpeechCard();
-    setGlobalSpeechState('idle', `Leitura da questão Q${card.dataset.q} concluída.`);
+    setGlobalSpeechState('idle', `Áudio da questão Q${card.dataset.q} concluído.`);
     filterContent();
   }
 
@@ -673,20 +603,20 @@
     clearSpeechTimer();
     state.speech.mode = 'idle';
     state.speech.card = null;
-    state.speech.utterance = null;
+    state.speech.audio = null;
     state.speech.paused = false;
     state.speech.queue = [];
     state.speech.index = -1;
     state.speech.runId += 1;
     clearCurrentSpeechCard();
-    setGlobalSpeechState('complete', `Leitura concluída: ${total} de ${total} questões.`);
+    setGlobalSpeechState('complete', `Áudio concluído: ${total} de ${total} questões.`);
     filterContent();
   }
 
   function failSpeech(runId, message) {
     if (state.speech.runId !== runId) return;
     clearSpeechTimer();
-    state.speech.utterance = null;
+    state.speech.audio = null;
     state.speech.paused = true;
     if (state.speech.card) setSpeechState(state.speech.card, 'paused');
     setGlobalSpeechState('error', message);
@@ -698,13 +628,13 @@
     clearSpeechTimer();
     state.speech.mode = 'idle';
     state.speech.card = null;
-    state.speech.utterance = null;
+    state.speech.audio?.pause();
+    state.speech.audio = null;
     state.speech.paused = false;
     state.speech.queue = [];
     state.speech.index = -1;
     clearCurrentSpeechCard();
     $$('.q-card.speech-playing, .q-card.speech-paused').forEach(activeCard => setSpeechState(activeCard, 'idle'));
-    window.speechSynthesis?.cancel();
     if (card) setSpeechState(card, 'idle');
     setGlobalSpeechState('idle');
     filterContent();
@@ -729,15 +659,15 @@
     if (state.speech.mode === 'all') {
       const number = state.speech.card?.dataset.q || '';
       const message = status === 'paused'
-        ? `Questão ${number} de ${state.speech.queue.length} — leitura pausada.`
-        : `Questão ${number} de ${state.speech.queue.length} — lendo.`;
+         ? `Questão ${number} de ${state.speech.queue.length} — áudio pausado.`
+         : `Questão ${number} de ${state.speech.queue.length} — reproduzindo.`;
       setGlobalSpeechState(status, message);
       return;
     }
 
     if (state.speech.mode === 'single') {
       const number = state.speech.card?.dataset.q || '';
-      setGlobalSpeechState(status === 'paused' ? 'paused' : 'single', `Leitura individual da questão Q${number}${status === 'paused' ? ' pausada.' : '.'}`);
+      setGlobalSpeechState(status === 'paused' ? 'paused' : 'single', `Áudio individual da questão Q${number}${status === 'paused' ? ' pausado.' : '.'}`);
     }
   }
 
@@ -755,8 +685,8 @@
     const labels = {
       idle: `Ouvir ${total} questões`,
       single: `Ouvir ${total} questões`,
-      playing: isAll ? 'Pausar leitura' : `Ouvir ${total} questões`,
-      paused: isAll ? 'Continuar leitura' : `Ouvir ${total} questões`,
+      playing: isAll ? 'Pausar áudio' : `Ouvir ${total} questões`,
+      paused: isAll ? 'Continuar áudio' : `Ouvir ${total} questões`,
       error: isAll ? 'Tentar novamente' : `Ouvir ${total} questões`,
       complete: 'Ouvir novamente'
     };
@@ -769,21 +699,7 @@
     playButton.setAttribute('aria-label', `${labels[status] || labels.idle}${isAll && status === 'playing' ? '' : ''}`);
     playButton.setAttribute('aria-pressed', String(isAll && status === 'playing'));
     stopButton.disabled = !isActive;
-    statusOutput.textContent = message || `Pronto para ler ${total} questões.`;
-  }
-
-  function getSpeechText(card) {
-    const question = $('.q-text', card).textContent.trim();
-    const answers = $$('.q-answer', card).map(answer => {
-      const letter = $('.q-letter', answer).textContent.trim();
-      const text = $$('span', answer)
-        .filter(span => !span.classList.contains('q-letter'))
-        .map(span => span.textContent.trim())
-        .join(' ');
-      return `Resposta ${letter}: ${text}`;
-    });
-
-    return `Questão ${card.dataset.q}. ${question}. Respostas corretas: ${answers.join('. ')}.`;
+    statusOutput.textContent = message || `Pronto para ouvir ${total} questões.`;
   }
 
   function setSpeechState(card, status) {
@@ -793,8 +709,8 @@
     const isActive = status !== 'idle';
     const labels = {
       idle: 'Ouvir questão e respostas',
-      playing: 'Pausar leitura',
-      paused: 'Continuar leitura'
+      playing: 'Pausar áudio',
+      paused: 'Continuar áudio'
     };
 
     card.classList.toggle('speech-playing', status === 'playing');
