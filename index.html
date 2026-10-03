@@ -12,6 +12,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📘</text></svg>">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
 <header class="site-header">
   <div class="header-inner">
@@ -37,6 +38,10 @@
     </nav>
 
     <div class="header-tools">
+      <a class="header-page-link" href="audiobook.html" aria-label="Abrir o audiobook de estudo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        <span>Audiobook</span>
+      </a>
       <div class="search-wrap">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <input id="search" type="search" placeholder="Buscar…" autocomplete="off" aria-label="Buscar conteúdo">
@@ -71,7 +76,7 @@
   </div>
 </header>
 
-<main class="container">
+<main id="main-content" class="container">
 
   <!-- ═══════════ ABA: CHEAT SHEET ═══════════ -->
   <section id="view-cheatsheet" class="view active" role="tabpanel">

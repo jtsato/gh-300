@@ -721,10 +721,142 @@ mark {
   .speech-global-stop { padding: 8px; }
 }
 
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  transform: translateY(-180%);
+  padding: 9px 13px;
+  border-radius: 7px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow-2);
+  transition: transform .2s;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.header-page-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  background: rgba(255,255,255,.07);
+  color: #d8d9e4;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s, background .2s, border-color .2s;
+}
+
+.header-page-link:hover {
+  background: rgba(255,255,255,.14);
+  color: #fff;
+  border-color: rgba(255,255,255,.3);
+}
+
+.header-page-link:focus-visible {
+  outline: 2px solid #b9a8ff;
+  outline-offset: 2px;
+}
+
+.header-page-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.audiobook-player {
+  margin-bottom: 40px;
+  padding: 22px 24px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+}
+
+.audiobook-player h2,
+.audiobook-transcript-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.audiobook-player p {
+  margin-top: 8px;
+  color: var(--ink-3);
+}
+
+.audiobook-player audio {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  margin: 18px 0 12px;
+}
+
+.audiobook-download {
+  color: var(--accent-ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.audiobook-transcript-title {
+  margin-bottom: 28px;
+  font-size: clamp(26px, 4vw, 36px);
+}
+
+.audiobook-preamble {
+  margin-bottom: 48px;
+}
+
+.audiobook-text {
+  max-width: 78ch;
+}
+
+.audiobook-text p {
+  margin: 0 0 18px;
+  color: var(--ink-2);
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.audiobook-text p:last-child {
+  margin-bottom: 0;
+}
+
+.audiobook-ending {
+  margin-top: 20px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 560px) {
+  .header-page-link span {
+    display: none;
+  }
+
+  .header-page-link {
+    padding: 9px;
+  }
+
+  .audiobook-player {
+    padding: 18px;
+  }
+}
+
 /* ═══════════ IMPRESSÃO ═══════════ */
 
 @media print {
-  .site-header, .chapter-nav, .site-footer, .q-studied-label, .q-audio-controls, .speech-global, #btn-print { display: none !important; }
+  .site-header, .chapter-nav, .site-footer, .q-studied-label, .q-audio-controls, .speech-global, #btn-print, .audiobook-player, .skip-link { display: none !important; }
   body { background: #fff; }
   body::before { display: none; }
   .view { display: block !important; page-break-before: always; }
