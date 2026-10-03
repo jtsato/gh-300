@@ -1,0 +1,711 @@
+{
+  "source": "data.js",
+  "modelId": "eleven_v4",
+  "outputFormat": "mp3_44100_128",
+  "voiceId": "uXLY5wQQjYVir1264I8I",
+  "generatedAt": "2026-10-03T16:57:47.522Z",
+  "questions": [
+    {
+      "number": 1,
+      "file": "questao-001.mp3",
+      "characters": 353,
+      "text": "Questão 1. Que tipo de insights a API de métricas de uso do GitHub Copilot pode fornecer para ajudar a avaliar a eficácia do GitHub Copilot? Respostas corretas: Resposta B: A API pode rastrear o número de sugestões de código aceitas e usadas na organização. Resposta E: A API pode fornecer métricas de aceitação de sugestões específicas do Copilot Chat."
+    },
+    {
+      "number": 2,
+      "file": "questao-002.mp3",
+      "characters": 160,
+      "text": "Questão 2. Qual método pode ser usado para interagir com GitHub Copilot? Resposta correta: Resposta D: De um navegador da web em github ponto copilot ponto com."
+    },
+    {
+      "number": 3,
+      "file": "questao-003.mp3",
+      "characters": 159,
+      "text": "Questão 3. Como o GitHub Copilot Individual é cobrado? Respostas corretas: Resposta A: Mensalmente como assinatura. Resposta B: Anualmente como uma assinatura."
+    },
+    {
+      "number": 4,
+      "file": "questao-004.mp3",
+      "characters": 270,
+      "text": "Questão 4. Como o GitHub Copilot pode ajudar os desenvolvedores durante a fase de análise de requisitos do Ciclo de Vida de Desenvolvimento de Software SDLC? Resposta correta: Resposta B: Fornecendo modelos e trechos de código que auxiliam na documentação de requisitos."
+    },
+    {
+      "number": 5,
+      "file": "questao-005.mp3",
+      "characters": 228,
+      "text": "Questão 5. Qual é a maneira correta de excluir arquivos específicos do uso do GitHub Copilot Business durante sugestões de código? Resposta correta: Resposta B: Adicione os arquivos específicos a um arquivo copilot ponto ignore."
+    },
+    {
+      "number": 6,
+      "file": "questao-006.mp3",
+      "characters": 290,
+      "text": "Questão 6. Quais das seguintes atividades relacionadas ao GitHub Copilot Business podem ser rastreadas usando os logs de auditoria da organização? Respostas corretas: Resposta B: Sugestões de código feitas pelo GitHub Copilot. Resposta C: Mudanças nas configurações de exclusão de conteúdo."
+    },
+    {
+      "number": 7,
+      "file": "questao-007.mp3",
+      "characters": 261,
+      "text": "Questão 7. Quais são as duas técnicas que podem ser usadas para melhorar os prompts do GitHub Copilot? Respostas corretas: Resposta A: Forneça critérios de sucesso específicos. Resposta C: Forneça informações sobre onde obter o conteúdo para obter uma resposta."
+    },
+    {
+      "number": 8,
+      "file": "questao-008.mp3",
+      "characters": 132,
+      "text": "Questão 8. Quanto tempo leva para a exclusão de conteúdo ser adicionada ou atualizada? Resposta correta: Resposta A: Até 30 minutos."
+    },
+    {
+      "number": 9,
+      "file": "questao-009.mp3",
+      "characters": 288,
+      "text": "Questão 9. Qual endpoint da API REST é usado para modificar detalhes sobre uma assinatura do GitHub Copilot Business? Respostas corretas: Resposta A: Adicionar equipes à assinatura do Copilot para uma organização. Resposta E: Remover equipes da assinatura do Copilot para uma organização."
+    },
+    {
+      "number": 10,
+      "file": "questao-010.mp3",
+      "characters": 245,
+      "text": "Questão 10. Qual configuração precisa ser definida para obter ajuda da Microsoft e do GitHub para proteção contra violação de IP ao usar o GitHub Copilot? Resposta correta: Resposta A: Sugestões que correspondem ao código público para bloqueado."
+    },
+    {
+      "number": 11,
+      "file": "questao-011.mp3",
+      "characters": 143,
+      "text": "Questão 11. Qual plano do GitHub Copilot permite a coleta de solicitações e sugestões? Resposta correta: Resposta C: GitHub Copilot Enterprise."
+    },
+    {
+      "number": 12,
+      "file": "questao-012.mp3",
+      "characters": 209,
+      "text": "Questão 12. Como você gera sugestões de código com GitHub Copilot na CLI? Resposta correta: Resposta B: Use gh copilot suggest e depois Escreva o comando desejado e depois Selecione a melhor sugestão da lista."
+    },
+    {
+      "number": 13,
+      "file": "questao-013.mp3",
+      "characters": 211,
+      "text": "Questão 13. Como o GitHub Copilot sugere otimizações de código para melhorar o desempenho? Resposta correta: Resposta A: Analisando a base de código e sugerindo algoritmos ou estruturas de dados mais eficientes."
+    },
+    {
+      "number": 14,
+      "file": "questao-014.mp3",
+      "characters": 277,
+      "text": "Questão 14. Quais práticas melhoram a qualidade das sugestões fornecidas pelo GitHub Copilot? Respostas corretas: Resposta A: Definir claramente o problema ou tarefa. Resposta C: Usando nomes de variáveis significativos. Resposta D: Fornecendo exemplos de resultados desejados."
+    },
+    {
+      "number": 15,
+      "file": "questao-015.mp3",
+      "characters": 190,
+      "text": "Questão 15. Como o GitHub Copilot Chat garante que uma função funcione corretamente? Resposta correta: Resposta A: Sugerindo afirmações asserts baseadas no contexto e na semântica do código."
+    },
+    {
+      "number": 16,
+      "file": "questao-016.mp3",
+      "characters": 253,
+      "text": "Questão 16. Qual recurso do GitHub Copilot pode ser configurado no nível da organização para evitar que o GitHub Copilot sugira trechos de código disponíveis publicamente? Resposta correta: Resposta C: Filtro de detecção de duplicação do GitHub Copilot."
+    },
+    {
+      "number": 17,
+      "file": "questao-017.mp3",
+      "characters": 279,
+      "text": "Questão 17. Quais são os efeitos das exclusões de conteúdo? Respostas corretas: Resposta A: O conteúdo excluído não está diretamente disponível para o GitHub Copilot usar como contexto. Resposta B: As sugestões do GitHub Copilot não estão mais disponíveis nos arquivos excluídos."
+    },
+    {
+      "number": 18,
+      "file": "questao-018.mp3",
+      "characters": 310,
+      "text": "Questão 18. Que tipos de prompts ou trechos de código podem ser sinalizados pelo filtro de toxicidade do GitHub Copilot? Respostas corretas: Resposta A: Discurso de ódio ou linguagem discriminatória por exemplo, insultos raciais, estereótipos ofensivos. Resposta B: Conteúdo sexualmente sugestivo ou explícito."
+    },
+    {
+      "number": 19,
+      "file": "questao-019.mp3",
+      "characters": 161,
+      "text": "Questão 19. Como o comando de barra comando barra tests ajuda os desenvolvedores? Resposta correta: Resposta B: Cria testes de unidade para o código selecionado."
+    },
+    {
+      "number": 20,
+      "file": "questao-020.mp3",
+      "characters": 222,
+      "text": "Questão 20. Como o conceito de justiça pode ser integrado no processo de operação de uma ferramenta de IA? Resposta correta: Resposta D: Treinar dados e algoritmos de IA para serem livres de preconceitos garantirá justiça."
+    },
+    {
+      "number": 21,
+      "file": "questao-021.mp3",
+      "characters": 454,
+      "text": "Questão 21. Como o GitHub Copilot pode facilitar uma experiência de aprendizado mais tranquila ao mergulhar em uma nova linguagem de programação? Respostas corretas: Resposta A: GitHub Copilot Chat pode fornecer orientação e suporte para tarefas e desafios comuns de codificação na linguagem de programação alvo. Resposta D: GitHub Copilot pode converter comentários em código para compreender a sintaxe e as nuances de uma nova linguagem de programação."
+    },
+    {
+      "number": 22,
+      "file": "questao-022.mp3",
+      "characters": 242,
+      "text": "Questão 22. Como você pode melhorar o contexto usado pelo GitHub Copilot? Respostas corretas: Resposta A: Abrindo as guias relevantes em seu IDE. Resposta D: Adicionando os caminhos completos dos arquivos ao prompt, para arquivos importantes."
+    },
+    {
+      "number": 23,
+      "file": "questao-023.mp3",
+      "characters": 252,
+      "text": "Questão 23. Qual é o papel do histórico de bate-papo nas sugestões de código do GitHub Copilot? Resposta correta: Resposta B: O histórico de bate-papo fornece contexto ao GitHub Copilot, melhorando a relevância e a precisão de suas sugestões de código."
+    },
+    {
+      "number": 24,
+      "file": "questao-024.mp3",
+      "characters": 195,
+      "text": "Questão 24. Qual das alternativas a seguir descreve a solicitação de função role prompting? Resposta correta: Resposta A: Descrever em seu prompt qual é sua função para obter uma sugestão melhor."
+    },
+    {
+      "number": 25,
+      "file": "questao-025.mp3",
+      "characters": 174,
+      "text": "Questão 25. O que é a solicitação de disparo zero zero shot prompting? Resposta correta: Resposta C: Apenas fazer uma pergunta ao GitHub Copilot como um prompt, sem exemplos."
+    },
+    {
+      "number": 26,
+      "file": "questao-026.mp3",
+      "characters": 184,
+      "text": "Questão 26. Selecione uma estratégia para aumentar o desempenho do GitHub Copilot Chat. Resposta correta: Resposta C: Aplicar técnicas de engenharia de prompt para ser mais específico."
+    },
+    {
+      "number": 27,
+      "file": "questao-027.mp3",
+      "characters": 350,
+      "text": "Questão 27. Como o GitHub Copilot Enterprise auxilia nas revisões de código durante o processo de pull request? Respostas corretas: Resposta B: Ele gera um resumo em prosa e uma lista com marcadores das principais alterações para todas as solicitações pull. Resposta D: Ele pode responder perguntas sobre o conjunto de alterações da solicitação pull."
+    },
+    {
+      "number": 28,
+      "file": "questao-028.mp3",
+      "characters": 229,
+      "text": "Questão 28. Qual dos cenários a seguir descreve melhor o uso pretendido do GitHub Copilot Chat como ferramenta? Resposta correta: Resposta B: Uma ferramenta de produtividade que dá sugestões, mas contando com o julgamento humano."
+    },
+    {
+      "number": 29,
+      "file": "questao-029.mp3",
+      "characters": 192,
+      "text": "Questão 29. Por que uma ferramenta de IA generativa Gen AI pode criar resultados imprecisos? Resposta correta: Resposta D: Os dados de treinamento podem conter preconceitos ou inconsistências."
+    },
+    {
+      "number": 30,
+      "file": "questao-030.mp3",
+      "characters": 183,
+      "text": "Questão 30. Qual das alternativas a seguir é um risco associado ao uso de IA? Resposta correta: Resposta B: Os sistemas de IA podem, por vezes, tomar decisões difíceis de interpretar."
+    },
+    {
+      "number": 31,
+      "file": "questao-031.mp3",
+      "characters": 324,
+      "text": "Questão 31. Quais dos prompts a seguir podem ser usados para orientar o GitHub Copilot Chat na refatoração do código para melhorias de qualidade? Respostas corretas: Resposta A: Mostre-me como melhorar a legibilidade desta função. Resposta B: Sugerir maneiras de melhorar a capacidade de manutenção deste segmento de código."
+    },
+    {
+      "number": 32,
+      "file": "questao-032.mp3",
+      "characters": 199,
+      "text": "Questão 32. Como o GitHub Copilot pode ajudar nas tarefas de refatoração de código? Resposta correta: Resposta C: GitHub Copilot pode sugerir melhorias de refatoração para melhor qualidade de código."
+    },
+    {
+      "number": 33,
+      "file": "questao-033.mp3",
+      "characters": 179,
+      "text": "Questão 33. Qual princípio enfatiza que os sistemas de IA devem ser compreensíveis e fornecer informações claras sobre como funcionam? Resposta correta: Resposta B: Transparência."
+    },
+    {
+      "number": 34,
+      "file": "questao-034.mp3",
+      "characters": 211,
+      "text": "Questão 34. Uma empresa está atualmente armazenando código no BitBucket e gostaria de usar o GitHub Copilot. Qual plano ela deve usar? Resposta correta: Resposta A: GitHub Copilot Business para clientes não GHE."
+    },
+    {
+      "number": 35,
+      "file": "questao-035.mp3",
+      "characters": 260,
+      "text": "Questão 35. Quando o GitHub Copilot ainda pode usar conteúdo que foi excluído por meio da exclusão de conteúdo? Resposta correta: Resposta A: Se o conteúdo de um arquivo excluído for referenciado em código que não foi excluído, por exemplo, chamadas de função."
+    },
+    {
+      "number": 36,
+      "file": "questao-036.mp3",
+      "characters": 169,
+      "text": "Questão 36. Qual é a vantagem de usar modelos personalizados no GitHub Copilot? Resposta correta: Resposta B: As respostas usam práticas e padrões dos seus repositórios."
+    },
+    {
+      "number": 37,
+      "file": "questao-037.mp3",
+      "characters": 217,
+      "text": "Questão 37. Quais recursos individuais do Copilot estão disponíveis ao usar uma extensão compatível para Visual Studio, VS Code ou IDEs JetBrains? Respostas corretas: Resposta A: Sugestões de código. Resposta B: Chat."
+    },
+    {
+      "number": 38,
+      "file": "questao-038.mp3",
+      "characters": 245,
+      "text": "Questão 38. Qual é a principal consideração ao confiar nas explicações do GitHub Copilot Chat sobre a funcionalidade do código e melhorias propostas? Resposta correta: Resposta B: Revisar e validar a saída gerada quanto à precisão e integridade."
+    },
+    {
+      "number": 39,
+      "file": "questao-039.mp3",
+      "characters": 190,
+      "text": "Questão 39. Qual é a melhor maneira de compartilhar feedback sobre o GitHub Copilot Chat ao usá-lo no GitHub Mobile? Resposta correta: Resposta C: Use os emojis na interface do Copilot Chat."
+    },
+    {
+      "number": 40,
+      "file": "questao-040.mp3",
+      "characters": 221,
+      "text": "Questão 40. Qual é a função principal do comando de barra comando barra optimize no Visual Studio? Resposta correta: Resposta B: Melhora o desempenho do código selecionado analisando sua complexidade de tempo de execução."
+    },
+    {
+      "number": 41,
+      "file": "questao-041.mp3",
+      "characters": 233,
+      "text": "Questão 41. Qual das afirmações a seguir descreve melhor o impacto do GitHub Copilot no processo de desenvolvimento de software? Resposta correta: Resposta C: Aumenta a produtividade ao automatizar tarefas repetitivas de codificação."
+    },
+    {
+      "number": 42,
+      "file": "questao-042.mp3",
+      "characters": 227,
+      "text": "Questão 42. Qual é o efeito provável do treinamento do GitHub Copilot em padrões de código comumente usados? Resposta correta: Resposta C: Sugerir trechos de código que reflitam as práticas mais comuns nos dados de treinamento."
+    },
+    {
+      "number": 43,
+      "file": "questao-043.mp3",
+      "characters": 305,
+      "text": "Questão 43. O que os desenvolvedores devem considerar ao confiar no GitHub Copilot para gerar código que envolve análise estatística? Resposta correta: Resposta B: As sugestões do GitHub Copilot são baseadas em tendências estatísticas e nem sempre se aplicam com precisão a conjuntos de dados específicos."
+    },
+    {
+      "number": 44,
+      "file": "questao-044.mp3",
+      "characters": 171,
+      "text": "Questão 44. Qual princípio ético de IA da Microsoft visa garantir que os sistemas de IA tratem todas as pessoas igualmente? Resposta correta: Resposta B: Justiça Fairness."
+    },
+    {
+      "number": 45,
+      "file": "questao-045.mp3",
+      "characters": 284,
+      "text": "Questão 45. Qual é o processo por trás da identificação de correspondências de código público ao usar um filtro de código público habilitado no GitHub Copilot? Resposta correta: Resposta A: Executando as sugestões de código por meio de filtros projetados para detectar código público."
+    },
+    {
+      "number": 46,
+      "file": "questao-046.mp3",
+      "characters": 179,
+      "text": "Questão 46. Qual conteúdo pode ser configurado para ser excluído com exclusões de conteúdo? Respostas corretas: Resposta B: Arquivos. Resposta C: Pastas. Resposta D: Repositórios."
+    },
+    {
+      "number": 47,
+      "file": "questao-047.mp3",
+      "characters": 235,
+      "text": "Questão 47. Qual das alternativas a seguir é a maneira correta de acessar os eventos de log de auditoria do GitHub Copilot Business? Resposta correta: Resposta C: Use a seção Log de auditoria nas configurações do GitHub da organização."
+    },
+    {
+      "number": 48,
+      "file": "questao-048.mp3",
+      "characters": 176,
+      "text": "Questão 48. Como o GitHub Copilot Chat ajuda a compreender a base de código existente? Resposta correta: Resposta C: Respondendo perguntas sobre o código e gerando explicações."
+    },
+    {
+      "number": 49,
+      "file": "questao-049.mp3",
+      "characters": 201,
+      "text": "Questão 49. Quais são as possíveis limitações do GitHub Copilot Chat? Respostas corretas: Resposta A: Dados de treinamento limitados. Resposta B: Capacidade de lidar com estruturas de código complexas."
+    },
+    {
+      "number": 50,
+      "file": "questao-050.mp3",
+      "characters": 191,
+      "text": "Questão 50. O que é uma limitação das exclusões de conteúdo? Resposta correta: Resposta A: As exclusões de conteúdo podem ser contornadas, pois estão disponíveis apenas para repositórios Git."
+    },
+    {
+      "number": 51,
+      "file": "questao-051.mp3",
+      "characters": 113,
+      "text": "Questão 51. Onde o serviço de proxy do GitHub Copilot é hospedado? Resposta correta: Resposta C: Microsoft Azure."
+    },
+    {
+      "number": 52,
+      "file": "questao-052.mp3",
+      "characters": 229,
+      "text": "Questão 52. O GitHub Copilot na interface de linha de comando CLI pode ser usado para definir as seguintes configurações: Escolha duas. Respostas corretas: Resposta A: A confirmação de execução padrão. Resposta B: Análise de uso."
+    },
+    {
+      "number": 53,
+      "file": "questao-053.mp3",
+      "characters": 382,
+      "text": "Questão 53. Quais são os riscos potenciais associados à dependência pesada do código gerado pelo GitHub Copilot? Respostas corretas: Resposta A: GitHub Copilot pode introduzir vulnerabilidades de segurança sugerindo código com explorações conhecidas. Resposta C: As sugestões do GitHub Copilot nem sempre refletem as práticas recomendadas ou os padrões de codificação mais recentes."
+    },
+    {
+      "number": 54,
+      "file": "questao-054.mp3",
+      "characters": 262,
+      "text": "Questão 54. Como o GitHub Copilot Chat utiliza seus dados de treinamento e fontes externas para gerar respostas ao responder perguntas de codificação? Resposta correta: Resposta A: Baseia-se principalmente nos dados de treinamento do modelo para gerar respostas."
+    },
+    {
+      "number": 55,
+      "file": "questao-055.mp3",
+      "characters": 286,
+      "text": "Questão 55. Como você pode usar o GitHub Copilot para obter sugestões integradas para refatorar seu código? Respostas corretas: Resposta A: Adicionando comentários ao seu código e acionando uma sugestão. Resposta D: Usando o comando comando barra fix no chat em linha do GitHub Copilot."
+    },
+    {
+      "number": 56,
+      "file": "questao-056.mp3",
+      "characters": 193,
+      "text": "Questão 56. Qual das afirmações a seguir está correta sobre as bases de conhecimento knowledge bases do GitHub Copilot? Resposta correta: Resposta C: É um recurso exclusivo do plano Enterprise."
+    },
+    {
+      "number": 57,
+      "file": "questao-057.mp3",
+      "characters": 231,
+      "text": "Questão 57. Por quanto tempo o GitHub retém os dados do Copilot para Business e Enterprise? Respostas corretas: Resposta B: Prompts e sugestões: retidos por 28 dias. Resposta C: Dados de engajamento do usuário: mantidos por 2 anos."
+    },
+    {
+      "number": 58,
+      "file": "questao-058.mp3",
+      "characters": 326,
+      "text": "Questão 58. Como o GitHub Copilot pode ser limitado quando se trata de sugerir testes unitários? Resposta correta: Resposta B: GitHub Copilot sugere principalmente testes de unidade básicos, focados nas funcionalidades principais, muitas vezes exigindo informações adicionais dos desenvolvedores para uma cobertura abrangente."
+    },
+    {
+      "number": 59,
+      "file": "questao-059.mp3",
+      "characters": 234,
+      "text": "Questão 59. Por que a revisão de código ainda é necessária ao usar o GitHub Copilot para escrever testes? Resposta correta: Resposta C: Porque os casos de teste gerados pelo GitHub Copilot podem não cobrir todos os cenários possíveis."
+    },
+    {
+      "number": 60,
+      "file": "questao-060.mp3",
+      "characters": 158,
+      "text": "Questão 60. Qual plano de preços do GitHub Copilot dá acesso às bases de conhecimento da sua empresa? Resposta correta: Resposta C: GitHub Copilot Enterprise."
+    },
+    {
+      "number": 61,
+      "file": "questao-061.mp3",
+      "characters": 371,
+      "text": "Questão 61. Qual método um desenvolvedor pode usar para gerar dados de amostra com o GitHub Copilot? Respostas corretas: Resposta A: Utilizando a capacidade do GitHub Copilot de criar informações fictícias a partir de padrões em dados de treinamento. Resposta D: Aproveitando as sugestões do GitHub Copilot para criar dados com base na documentação da API no repositório."
+    },
+    {
+      "number": 62,
+      "file": "questao-062.mp3",
+      "characters": 182,
+      "text": "Questão 62. Um contratante independente desenvolve aplicativos para diversos clientes diferentes. Qual plano é mais adequado? Resposta correta: Resposta A: GitHub Copilot Individual."
+    },
+    {
+      "number": 63,
+      "file": "questao-063.mp3",
+      "characters": 302,
+      "text": "Questão 63. Identifique os casos de uso corretos onde o GitHub Copilot Chat é mais eficaz. Respostas corretas: Resposta B: Explicar um código COBOL legado e traduzir o código para outra linguagem como C sharp. Resposta C: Criação de um cenário de teste de unidade para código Python recém-desenvolvido."
+    },
+    {
+      "number": 64,
+      "file": "questao-064.mp3",
+      "characters": 145,
+      "text": "Questão 64. Como você pode obter várias sugestões do GitHub Copilot? Resposta correta: Resposta B: Ao abrir o painel de conclusões no seu editor."
+    },
+    {
+      "number": 65,
+      "file": "questao-065.mp3",
+      "characters": 243,
+      "text": "Questão 65. De que forma o GitHub Copilot e o GitHub Copilot Chat podem ajudar os desenvolvedores na modernização de aplicativos? Resposta correta: Resposta B: GitHub Copilot pode sugerir padrões de programação modernos com base no seu código."
+    },
+    {
+      "number": 66,
+      "file": "questao-066.mp3",
+      "characters": 193,
+      "text": "Questão 66. De qual das opções a seguir o LLM do GitHub Copilot deriva o contexto ao produzir uma resposta? Resposta correta: Resposta A: Arquivos vizinhos ou relacionados dentro de um projeto."
+    },
+    {
+      "number": 67,
+      "file": "questao-067.mp3",
+      "characters": 364,
+      "text": "Questão 67. Qual das afirmações a seguir descreve corretamente como o GitHub Copilot Individual usa dados de prompt? Respostas corretas: Resposta A: Os dados de prompt são usados para treinar modelos de aprendizado de máquina para melhores sugestões de código. Resposta C: A entrada do usuário em tempo real ajuda a gerar sugestões de código sensíveis ao contexto."
+    },
+    {
+      "number": 68,
+      "file": "questao-068.mp3",
+      "characters": 333,
+      "text": "Questão 68. O que você verifica quando as exclusões de conteúdo do GitHub Copilot não estão funcionando? Respostas corretas: Resposta A: Se o usuário estiver em uma organização que tenha exclusões de conteúdo configuradas. Resposta B: Se as configurações de exclusão de conteúdo foram alteradas nos últimos 30 minutos ou antes disso."
+    },
+    {
+      "number": 69,
+      "file": "questao-069.mp3",
+      "characters": 183,
+      "text": "Questão 69. Qual configuração do GitHub Copilot precisa ser habilitada para proteção contra violações de IP? Resposta correta: Resposta B: Bloquear correspondências de código público."
+    },
+    {
+      "number": 70,
+      "file": "questao-070.mp3",
+      "characters": 200,
+      "text": "Questão 70. Identifique as etapas envolvidas no ciclo de vida de uma sugestão de código do GitHub Copilot. Respostas corretas: Resposta B: Capturar o contexto do usuário. Resposta E: Gerar a sugestão."
+    },
+    {
+      "number": 71,
+      "file": "questao-071.mp3",
+      "characters": 254,
+      "text": "Questão 71. Quais planos de preços do GitHub Copilot incluem recursos que excluem seus dados uso, prompts e sugestões do treinamento padrão do GitHub Copilot? Respostas corretas: Resposta B: GitHub Copilot Business. Resposta C: GitHub Copilot Enterprise."
+    },
+    {
+      "number": 72,
+      "file": "questao-072.mp3",
+      "characters": 265,
+      "text": "Questão 72. Quais são as duas opções de navegação para configurar a detecção de duplicatas? Respostas corretas: Resposta A: Configurações empresariais e depois Copilot e depois Políticas. Resposta B: Configurações da organização e depois Copilot e depois Políticas."
+    },
+    {
+      "number": 73,
+      "file": "questao-073.mp3",
+      "characters": 424,
+      "text": "Questão 73. Quais são as diferentes maneiras de contextualizar o GitHub Copilot para obter respostas mais precisas? Respostas corretas: Resposta A: Envolver-se com participantes do chat, como arroba workspace, para incorporar contexto colaborativo nas respostas. Resposta B: Utilizar variáveis de chat como hashtag file e hashtag editors para ancorar a conversa dentro do contexto específico dos arquivos ou editores em uso."
+    },
+    {
+      "number": 74,
+      "file": "questao-074.mp3",
+      "characters": 185,
+      "text": "Questão 74. O que pode ser feito durante o desenvolvimento da IA para minimizar preconceitos? Resposta correta: Resposta C: Usar dados diversos, métricas de justiça e supervisão humana."
+    },
+    {
+      "number": 75,
+      "file": "questao-075.mp3",
+      "characters": 240,
+      "text": "Questão 75. Ao usar o GitHub Copilot Chat para gerar código de teste, como você pode orientar a IA a seguir os padrões de teste da sua empresa? Resposta correta: Resposta B: Usando exemplos de prompts específicos em sua solicitação de chat."
+    },
+    {
+      "number": 76,
+      "file": "questao-076.mp3",
+      "characters": 215,
+      "text": "Questão 76. Ao criar prompts para o GitHub Copilot, qual é a estratégia recomendada para aumentar a relevância do código gerado? Resposta correta: Resposta B: Forneça exemplos de entrada e saída esperadas no prompt."
+    },
+    {
+      "number": 77,
+      "file": "questao-077.mp3",
+      "characters": 208,
+      "text": "Questão 77. Qual é uma das práticas recomendadas ao usar o GitHub Copilot Chat para melhorar a qualidade do código? Resposta correta: Resposta C: Revise e refatore regularmente o código sugerido pelo Copilot."
+    },
+    {
+      "number": 78,
+      "file": "questao-078.mp3",
+      "characters": 326,
+      "text": "Questão 78. Quais são as verificações adicionais que precisam ser aprovadas antes que as respostas do GitHub Copilot sejam enviadas ao usuário? Respostas corretas: Resposta C: Sugestões correspondentes ao código público opcional com base nas configurações. Resposta D: Compatibilidade com configurações específicas do usuário."
+    },
+    {
+      "number": 79,
+      "file": "questao-079.mp3",
+      "characters": 290,
+      "text": "Questão 79. Como o GitHub Copilot normalmente lida com sugestões de código que envolvem recursos obsoletos ou sintaxe de linguagens de programação? Resposta correta: Resposta B: O GitHub Copilot pode sugerir sintaxe ou recursos obsoletos se estiverem presentes em seus dados de treinamento."
+    },
+    {
+      "number": 80,
+      "file": "questao-080.mp3",
+      "characters": 224,
+      "text": "Questão 80. O que é uma solicitação de poucos disparos few shot prompting? Resposta correta: Resposta C: Informar ao GitHub Copilot sobre o mecanismo que você deseja usar e como incorporar isso na resposta fornecer exemplos."
+    },
+    {
+      "number": 81,
+      "file": "questao-081.mp3",
+      "characters": 157,
+      "text": "Questão 81. Ao usar o GitHub Copilot Chat para gerar testes de unidade, qual comando de barra você usaria? Resposta correta: Resposta B: comando barra tests."
+    },
+    {
+      "number": 82,
+      "file": "questao-082.mp3",
+      "characters": 203,
+      "text": "Questão 82. Qual é o objetivo principal dos logs de auditoria da organização no GitHub Copilot Business? Resposta correta: Resposta B: Monitorar atividades e ações do administrador dentro da organização."
+    },
+    {
+      "number": 83,
+      "file": "questao-083.mp3",
+      "characters": 192,
+      "text": "Questão 83. Como os usuários podem fornecer feedback sobre o GitHub Copilot Chat usando seu IDE? Resposta correta: Resposta B: Através do botão Compartilhar feedback no painel do Copilot Chat."
+    },
+    {
+      "number": 84,
+      "file": "questao-084.mp3",
+      "characters": 210,
+      "text": "Questão 84. Uma equipe está usando o GitHub Copilot Individual e precisa de recursos administrativos e de exclusão de conteúdo. O que deve fazer? Resposta correta: Resposta A: Atualizar para o Copilot Business."
+    },
+    {
+      "number": 85,
+      "file": "questao-085.mp3",
+      "characters": 206,
+      "text": "Questão 85. Uma equipe quer aplicar políticas de exclusão de conteúdo, mas usa o GitHub Copilot Individual. O que é necessário? Resposta correta: Resposta A: Transição upgrade para o plano Copilot Business."
+    },
+    {
+      "number": 86,
+      "file": "questao-086.mp3",
+      "characters": 265,
+      "text": "Questão 86. Qual é o impacto da técnica Fill in the Middle FIM nas sugestões de código do GitHub Copilot? Resposta correta: Resposta C: Melhora as sugestões considerando tanto o prefixo quanto o sufixo do código, preenchendo a parte intermediária com mais precisão."
+    },
+    {
+      "number": 87,
+      "file": "questao-087.mp3",
+      "characters": 317,
+      "text": "Questão 87. Que tipo de informação você pode recuperar sobre as assinaturas do GitHub Copilot Business por meio da API REST? Respostas corretas: Resposta B: Listar todas as atribuições de licença do GitHub Copilot para uma organização. Resposta C: Obter um resumo do uso do GitHub Copilot para membros da organização."
+    },
+    {
+      "number": 88,
+      "file": "questao-088.mp3",
+      "characters": 260,
+      "text": "Questão 88. Como o GitHub Copilot utiliza o histórico de chat para aprimorar seus recursos de conclusão de código? Resposta correta: Resposta B: Usando o histórico de bate-papo para oferecer trechos de código personalizados com base em solicitações anteriores."
+    },
+    {
+      "number": 89,
+      "file": "questao-089.mp3",
+      "characters": 235,
+      "text": "Questão 89. Há alguma limitação a ser considerada ao usar o GitHub Copilot para refatoração de código? Resposta correta: Resposta D: O GitHub Copilot nem sempre produz código otimizado ou alinhado às melhores práticas para refatoração."
+    },
+    {
+      "number": 90,
+      "file": "questao-090.mp3",
+      "characters": 256,
+      "text": "Questão 90. Ao usar o GitHub Copilot para identificar testes ausentes em sua base de código, qual é o fator mais importante a ser considerado? Resposta correta: Resposta A: Garantir que o contexto correto do projeto esteja disponível para o GitHub Copilot."
+    },
+    {
+      "number": 91,
+      "file": "questao-091.mp3",
+      "characters": 218,
+      "text": "Questão 91. Sobre quais tipos de conteúdo a base de conhecimento do GitHub Copilot pode responder a perguntas? Respostas corretas: Resposta A: Trechos de código. Resposta C: Documentação. Resposta D: Padrões de design."
+    },
+    {
+      "number": 92,
+      "file": "questao-092.mp3",
+      "characters": 223,
+      "text": "Questão 92. Onde você pode validar se o GitHub Copilot não está retornando sugestões devido a exclusões de conteúdo? Resposta correta: Resposta B: O ícone do GitHub Copilot na barra de status do editor exibirá uma mensagem."
+    },
+    {
+      "number": 93,
+      "file": "questao-093.mp3",
+      "characters": 235,
+      "text": "Questão 93. Por que é importante garantir a segurança do código utilizado nas ferramentas de IA generativa Gen AI? Resposta correta: Resposta B: Garantir a segurança do código evita acesso não autorizado e possíveis violações de dados."
+    },
+    {
+      "number": 94,
+      "file": "questao-094.mp3",
+      "characters": 377,
+      "text": "Questão 94. De que forma o GitHub Copilot pode oferecer suporte a um desenvolvedor durante o processo de refatoração de código? Respostas corretas: Resposta A: Fornecendo sugestões para melhorar a legibilidade e a manutenção do código com base nas melhores práticas. Resposta B: Oferecendo exemplos de transformação de código que melhoram o desempenho e reduzem a complexidade."
+    },
+    {
+      "number": 95,
+      "file": "questao-095.mp3",
+      "characters": 300,
+      "text": "Questão 95. Quais motivos podem explicar por que as sugestões de código não funcionam no seu editor? Respostas corretas: Resposta A: Você não tem uma conexão ativa com a Internet. Resposta B: Sua linguagem de programação não é suportada. Resposta D: Você não tem uma licença válida do GitHub Copilot."
+    },
+    {
+      "number": 96,
+      "file": "questao-096.mp3",
+      "characters": 228,
+      "text": "Questão 96. Como o GitHub Copilot pode ajudar a manter a consistência em seus testes? Resposta correta: Resposta A: Identificando um padrão na maneira como você escreve testes e sugerindo padrões semelhantes para testes futuros."
+    },
+    {
+      "number": 97,
+      "file": "questao-097.mp3",
+      "characters": 187,
+      "text": "Questão 97. Se você estiver trabalhando em projetos de código aberto, como o GitHub Copilot Individual pode ser pago? Resposta correta: Resposta B: Através de fatura ou cartão de crédito."
+    },
+    {
+      "number": 98,
+      "file": "questao-098.mp3",
+      "characters": 225,
+      "text": "Questão 98. Como o GitHub Copilot pode ajudar os desenvolvedores a escrever documentação para seus códigos? Resposta correta: Resposta B: GitHub Copilot pode sugerir resumos ou descrições com base na funcionalidade do código."
+    },
+    {
+      "number": 99,
+      "file": "questao-099.mp3",
+      "characters": 241,
+      "text": "Questão 99. Qual é a função do pré-processamento da entrada do usuário no fluxo de dados do GitHub Copilot Chat? Resposta correta: Resposta A: Enriquece o prompt de entrada com contexto adicional antes de passá-lo para o modelo de linguagem."
+    },
+    {
+      "number": 100,
+      "file": "questao-100.mp3",
+      "characters": 230,
+      "text": "Questão 100. Como estabelecer uma política em toda a organização para o GitHub Copilot Business restringir seu uso a determinados repositórios? Resposta correta: Resposta B: Configure as políticas nas configurações da organização."
+    },
+    {
+      "number": 101,
+      "file": "questao-101.mp3",
+      "characters": 165,
+      "text": "Questão 101. Quais recursos do Copilot Enterprise estão disponíveis em todos os IDEs com suporte comercial? Resposta correta: Resposta A: Sugestões embutidas inline."
+    },
+    {
+      "number": 102,
+      "file": "questao-102.mp3",
+      "characters": 261,
+      "text": "Questão 102. De que forma o GitHub Copilot pode contribuir para a fase de design do Ciclo de Vida de Desenvolvimento de Software SDLC? Resposta correta: Resposta B: GitHub Copilot pode sugerir padrões de design e práticas recomendadas relevantes para o projeto."
+    },
+    {
+      "number": 103,
+      "file": "questao-103.mp3",
+      "characters": 283,
+      "text": "Questão 103. Quais das afirmações a seguir são verdadeiras sobre sugestões de código? Respostas corretas: Resposta A: Sugestões de códigos alternativos podem ser mostradas em uma nova guia. Resposta B: Você pode usar atalhos de teclado para aceitar a próxima palavra em uma sugestão."
+    },
+    {
+      "number": 104,
+      "file": "questao-104.mp3",
+      "characters": 188,
+      "text": "Questão 104. Qual plano do GitHub Copilot uma organização do Azure DevOps poderia usar sem exigir uma licença do GitHub Enterprise? Resposta correta: Resposta A: GitHub Copilot Individual."
+    },
+    {
+      "number": 105,
+      "file": "questao-105.mp3",
+      "characters": 255,
+      "text": "Questão 105. Como o GitHub Copilot ajuda os desenvolvedores a reduzir a quantidade de código padrão boilerplate manual que eles escrevem? Resposta correta: Resposta C: Sugerindo trechos de código que podem ser reutilizados em diferentes partes do projeto."
+    },
+    {
+      "number": 106,
+      "file": "questao-106.mp3",
+      "characters": 274,
+      "text": "Questão 106. Como os insights obtidos com a API de métricas podem ser usados para melhorar o processo de desenvolvimento em conjunto com o GitHub Copilot? Resposta correta: Resposta A: Insights sobre os tipos de linguagens de codificação em que o GitHub Copilot é mais útil."
+    },
+    {
+      "number": 107,
+      "file": "questao-107.mp3",
+      "characters": 203,
+      "text": "Questão 107. O que é usado pelo GitHub Copilot no IDE para determinar o contexto do prompt? Resposta correta: Resposta D: Informações do IDE como abas abertas, localização do cursor e código selecionado."
+    },
+    {
+      "number": 108,
+      "file": "questao-108.mp3",
+      "characters": 356,
+      "text": "Questão 108. Como o GitHub Copilot identifica código correspondente e garante que o código público seja tratado ou bloqueado adequadamente? Respostas corretas: Resposta A: Filtrando sugestões que correspondam ao código de repositórios públicos. Resposta C: Implementando salvaguardas para detectar e evitar a sugestão de trechos literais de código público."
+    },
+    {
+      "number": 109,
+      "file": "questao-109.mp3",
+      "characters": 208,
+      "text": "Questão 109. Como o GitHub Copilot Chat ajuda a corrigir problemas de segurança na sua base de código? Resposta correta: Resposta A: Anotando as sugestões fornecidas com padrões de vulnerabilidade conhecidos."
+    },
+    {
+      "number": 110,
+      "file": "questao-110.mp3",
+      "characters": 247,
+      "text": "Questão 110. Quais são as possíveis limitações do GitHub Copilot na manutenção de bases de código existentes? Resposta correta: Resposta B: O GitHub Copilot pode não compreender totalmente o contexto e as dependências de uma base de código grande."
+    },
+    {
+      "number": 111,
+      "file": "questao-111.mp3",
+      "characters": 249,
+      "text": "Questão 111. Qual é o objetivo principal do filtro de detecção de duplicação no GitHub Copilot? Resposta correta: Resposta D: Detectar e bloquear sugestões que correspondam a trechos de código público no GitHub se contiverem cerca de 150 caracteres."
+    },
+    {
+      "number": 112,
+      "file": "questao-112.mp3",
+      "characters": 227,
+      "text": "Questão 112. Ao usar um IDE com um plug-in GitHub Copilot compatível, quais recursos do Chat podem ser acessados no IDE? Respostas corretas: Resposta A: Gerar testes unitários. Resposta B: Explicar o código e sugerir melhorias."
+    },
+    {
+      "number": 113,
+      "file": "questao-113.mp3",
+      "characters": 260,
+      "text": "Questão 113. Que cuidado os desenvolvedores devem ter ao usar o GitHub Copilot para obter assistência com cálculos matemáticos? Resposta correta: Resposta B: A dependência do GitHub Copilot em respostas baseadas em padrões, sem verificar a precisão do cálculo."
+    },
+    {
+      "number": 114,
+      "file": "questao-114.mp3",
+      "characters": 273,
+      "text": "Questão 114. Um gerente de mídia social deseja usar IA para filtrar conteúdo. Como aplicar o princípio da transparência? Resposta correta: Resposta A: Fornecendo explicações claras sobre os tipos de conteúdo que a IA foi projetada para filtrar e como chega à sua conclusão."
+    },
+    {
+      "number": 115,
+      "file": "questao-115.mp3",
+      "characters": 197,
+      "text": "Questão 115. Como o GitHub Copilot ajuda os desenvolvedores a minimizar a alternância de contexto? Resposta correta: Resposta B: GitHub Copilot permite que os desenvolvedores permaneçam em seu IDE."
+    },
+    {
+      "number": 116,
+      "file": "questao-116.mp3",
+      "characters": 310,
+      "text": "Questão 116. Em quais cenários o GitHub Copilot Chat pode ser usado para aumentar a produtividade? Respostas corretas: Resposta A: Um desenvolvedor é adicionado a um novo projeto e gostaria de entender o código do software atual. Resposta D: Criar um arquivo de documentação para a base de código recém-criada."
+    },
+    {
+      "number": 117,
+      "file": "questao-117.mp3",
+      "characters": 222,
+      "text": "Questão 117. Qual função específica o comando de barra comando barra fix executa? Resposta correta: Resposta C: Propõe alterações para problemas detectados, sugerindo correções para erros de sintaxe e erros de programação."
+    }
+  ]
+}
