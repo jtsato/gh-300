@@ -52,34 +52,50 @@
     <a class="audiobook-download" href="audio/audiobook-github-copilot.mp3" download>Baixar o áudio MP3</a>
   </section>
 
-  <div class="chapters-layout">
-    <aside class="chapter-nav" aria-label="Capítulos do audiobook">
-      <h3>Capítulos</h3>
-      <nav aria-label="Navegação por capítulo">
-        <ol>
-          <li><a href="#capitulo-1"><span class="nav-num">01</span><span class="nav-title">Como o GitHub Copilot Funciona</span></a></li>
-          <li><a href="#capitulo-2"><span class="nav-num">02</span><span class="nav-title">Planos, Preços e Cobrança</span></a></li>
-          <li><a href="#capitulo-3"><span class="nav-num">03</span><span class="nav-title">Engenharia de Prompt</span></a></li>
-          <li><a href="#capitulo-4"><span class="nav-num">04</span><span class="nav-title">GitHub Copilot Chat</span></a></li>
-          <li><a href="#capitulo-5"><span class="nav-num">05</span><span class="nav-title">Comandos de Barra, CLI e Sugestões</span></a></li>
-          <li><a href="#capitulo-6"><span class="nav-num">06</span><span class="nav-title">Copilot Enterprise: Recursos Avançados</span></a></li>
-          <li><a href="#capitulo-7"><span class="nav-num">07</span><span class="nav-title">Gestão: Políticas, Exclusões e Auditoria</span></a></li>
-          <li><a href="#capitulo-8"><span class="nav-num">08</span><span class="nav-title">Segurança, IP e Código Público</span></a></li>
-          <li><a href="#capitulo-9"><span class="nav-num">09</span><span class="nav-title">Ética e IA Responsável</span></a></li>
-          <li><a href="#capitulo-10"><span class="nav-num">10</span><span class="nav-title">SDLC: Desenvolvimento, Testes e Produtividade</span></a></li>
-        </ol>
-      </nav>
-    </aside>
+  <div class="audiobook-carousel" id="audiobook-carousel">
+    <div class="carousel-toolbar">
+      <button id="chapter-menu-toggle" class="chapter-menu-toggle" type="button" aria-expanded="false" aria-controls="chapter-nav-panel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+        <span>Capítulos</span>
+      </button>
+      <div class="carousel-position" aria-live="polite">Capítulo <span id="carousel-current">01</span> de <span id="carousel-total">10</span></div>
+    </div>
 
-    <article class="audiobook-transcript" aria-labelledby="transcript-title">
-      <h2 id="transcript-title" class="audiobook-transcript-title">Texto completo</h2>
+    <div class="chapter-menu-backdrop" aria-hidden="true"></div>
 
-      <div class="audiobook-preamble audiobook-text">
-        <p>GitHub Copilot. Guia de estudo para a certificação G H trezentos.</p>
-        <p>Neste áudio, os principais conceitos do exame são apresentados em dez capítulos, organizados por tema: como o Copilot funciona, planos e cobrança, engenharia de prompt, o Chat, comandos, recursos do Enterprise, gestão, segurança, ética e o ciclo de desenvolvimento de software. Vamos começar.</p>
-      </div>
+    <div class="chapters-layout">
+      <aside id="chapter-nav-panel" class="chapter-nav" aria-label="Capítulos do audiobook">
+        <h3>Capítulos</h3>
+        <button class="chapter-menu-close" type="button" aria-label="Fechar menu de capítulos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+          </svg>
+        </button>
+        <nav aria-label="Navegação por capítulo">
+          <ol>
+            <li><a href="#capitulo-1" data-chapter="capitulo-1"><span class="nav-num">01</span><span class="nav-title">Como o GitHub Copilot Funciona</span></a></li>
+            <li><a href="#capitulo-2" data-chapter="capitulo-2"><span class="nav-num">02</span><span class="nav-title">Planos, Preços e Cobrança</span></a></li>
+            <li><a href="#capitulo-3" data-chapter="capitulo-3"><span class="nav-num">03</span><span class="nav-title">Engenharia de Prompt</span></a></li>
+            <li><a href="#capitulo-4" data-chapter="capitulo-4"><span class="nav-num">04</span><span class="nav-title">GitHub Copilot Chat</span></a></li>
+            <li><a href="#capitulo-5" data-chapter="capitulo-5"><span class="nav-num">05</span><span class="nav-title">Comandos de Barra, CLI e Sugestões</span></a></li>
+            <li><a href="#capitulo-6" data-chapter="capitulo-6"><span class="nav-num">06</span><span class="nav-title">Copilot Enterprise: Recursos Avançados</span></a></li>
+            <li><a href="#capitulo-7" data-chapter="capitulo-7"><span class="nav-num">07</span><span class="nav-title">Gestão: Políticas, Exclusões e Auditoria</span></a></li>
+            <li><a href="#capitulo-8" data-chapter="capitulo-8"><span class="nav-num">08</span><span class="nav-title">Segurança, IP e Código Público</span></a></li>
+            <li><a href="#capitulo-9" data-chapter="capitulo-9"><span class="nav-num">09</span><span class="nav-title">Ética e IA Responsável</span></a></li>
+            <li><a href="#capitulo-10" data-chapter="capitulo-10"><span class="nav-num">10</span><span class="nav-title">SDLC: Desenvolvimento, Testes e Produtividade</span></a></li>
+          </ol>
+        </nav>
+      </aside>
 
-      <section id="capitulo-1" class="chapter audiobook-chapter" aria-labelledby="capitulo-1-title">
+      <article class="audiobook-transcript" aria-label="Capítulos do audiobook">
+        <div id="chapter-stage" class="chapter-stage" role="region" aria-label="Capítulo atual">
+
+        <section id="capitulo-1" class="chapter audiobook-chapter is-active" aria-labelledby="capitulo-1-title" aria-hidden="false" role="group" aria-roledescription="slide" tabindex="-1">
         <div class="chapter-head">
           <div class="chapter-bignum" aria-hidden="true">01</div>
           <div>
@@ -88,14 +104,14 @@
           </div>
         </div>
         <div class="audiobook-text">
-          <p>O GitHub Copilot é um assistente que ajuda a escrever código, e há mais de uma forma de interagir com ele. Uma delas é diretamente pelo navegador, acessando github ponto com. O serviço de proxy do Copilot é hospedado no Microsoft Azure.</p>
-          <p>Para sugerir algo útil, o Copilot depende de contexto. No I D E, ele usa informações como as abas abertas, a posição do cursor e o código selecionado. O modelo de linguagem, o L L M, também deriva contexto de arquivos vizinhos ou relacionados dentro do projeto. No Copilot Chat, existe ainda uma etapa de pré-processamento da entrada do usuário, que enriquece o prompt com contexto adicional antes de passá-lo ao modelo de linguagem. Entre as etapas do ciclo de vida de uma sugestão estão capturar o contexto do usuário e gerar a sugestão. A técnica Fill in the Middle, ou F I M, melhora as sugestões ao considerar tanto o prefixo quanto o sufixo do código, preenchendo a parte intermediária com mais precisão.</p>
+          <p>O GitHub Copilot é um assistente que ajuda a escrever código, e há mais de uma forma de interagir com ele. Uma delas é diretamente pelo navegador, acessando github.com. O serviço de proxy do Copilot é hospedado no Microsoft Azure.</p>
+          <p>Para sugerir algo útil, o Copilot depende de contexto. Na IDE, ele usa informações como as abas abertas, a posição do cursor e o código selecionado. O modelo de linguagem, o LLM, também deriva contexto de arquivos vizinhos ou relacionados dentro do projeto. No Copilot Chat, existe ainda uma etapa de pré-processamento da entrada do usuário, que enriquece o prompt com contexto adicional antes de passá-lo ao modelo de linguagem. Entre as etapas do ciclo de vida de uma sugestão estão capturar o contexto do usuário e gerar a sugestão. A técnica Fill in the Middle, ou FIM, melhora as sugestões ao considerar tanto o prefixo quanto o sufixo do código, preenchendo a parte intermediária com mais precisão.</p>
           <p>Como foi treinado em padrões de código comumente usados, o Copilot tende a sugerir trechos que refletem as práticas mais comuns nos dados de treinamento. O Copilot Chat, por sua vez, se baseia principalmente nos dados de treinamento do modelo para gerar o que devolve ao usuário. Por isso, o Copilot pode sugerir sintaxe ou recursos obsoletos, se eles estiverem presentes nesses dados.</p>
           <p>Na prática, o Copilot aumenta a produtividade ao automatizar tarefas repetitivas de codificação. E quando as sugestões de código não aparecem no editor, os motivos possíveis são: não haver uma conexão ativa com a internet, a linguagem de programação não ser suportada, ou não haver uma licença válida do GitHub Copilot.</p>
         </div>
       </section>
 
-      <section id="capitulo-2" class="chapter audiobook-chapter" aria-labelledby="capitulo-2-title">
+       <section id="capitulo-2" class="chapter audiobook-chapter" aria-labelledby="capitulo-2-title" aria-hidden="true" role="group" aria-roledescription="slide" tabindex="-1">
         <div class="chapter-head">
           <div class="chapter-bignum" aria-hidden="true">02</div>
           <div>
@@ -104,14 +120,14 @@
           </div>
         </div>
         <div class="audiobook-text">
-          <p>O GitHub Copilot Individual é cobrado de duas formas: mensalmente, como assinatura, ou anualmente, também como assinatura. Para quem trabalha em projetos de código aberto, o pagamento pode ser feito por fatura ou cartão de crédito. O Individual é o plano indicado para um contratante independente que desenvolve aplicativos para diversos clientes. Uma organização do Azure DevOps também pode usá-lo, sem precisar de uma licença do GitHub Enterprise. Quanto aos dados, o Individual usa os dados de prompt para treinar modelos de aprendizado de máquina, em busca de sugestões de código melhores, e a entrada do usuário em tempo real ajuda a gerar sugestões sensíveis ao contexto. Ao usar uma extensão compatível para Visual Studio, V S Code ou I D Es da JetBrains, ficam disponíveis as sugestões de código e o Chat.</p>
-          <p>Quando a equipe usa o Individual e precisa de recursos administrativos e de exclusão de conteúdo, o caminho é atualizar para o Copilot Business. O Business também é o plano para uma empresa que guarda seu código no Bitbucket e quer usar o Copilot, no caso de clientes que não usam o G H E.</p>
+          <p>O GitHub Copilot Individual é cobrado de duas formas: mensalmente, como assinatura, ou anualmente, também como assinatura. Para quem trabalha em projetos de código aberto, o pagamento pode ser feito por fatura ou cartão de crédito. O Individual é o plano indicado para um contratante independente que desenvolve aplicativos para diversos clientes. Uma organização do Azure DevOps também pode usá-lo, sem precisar de uma licença do GitHub Enterprise. Quanto aos dados, o Individual usa os dados de prompt para treinar modelos de aprendizado de máquina, em busca de sugestões de código melhores, e a entrada do usuário em tempo real ajuda a gerar sugestões sensíveis ao contexto. Ao usar uma extensão compatível para Visual Studio, VS Code ou IDEs da JetBrains, ficam disponíveis as sugestões de código e o Chat.</p>
+          <p>Quando a equipe usa o Individual e precisa de recursos administrativos e de exclusão de conteúdo, o caminho é atualizar para o Copilot Business. O Business também é o plano para uma empresa que guarda seu código no Bitbucket e quer usar o Copilot, no caso de clientes que não usam o GHE.</p>
           <p>Tanto o Business quanto o Enterprise incluem recursos que excluem os dados de uso, os prompts e as sugestões do treinamento padrão do GitHub Copilot. Nesses dois planos, o GitHub retém prompts e sugestões por 28 dias, e os dados de engajamento do usuário por 2 anos.</p>
           <p>O plano que permite a coleta de solicitações e sugestões é o Copilot Enterprise. É também o plano que dá acesso às bases de conhecimento da empresa.</p>
         </div>
       </section>
 
-      <section id="capitulo-3" class="chapter audiobook-chapter" aria-labelledby="capitulo-3-title">
+       <section id="capitulo-3" class="chapter audiobook-chapter" aria-labelledby="capitulo-3-title" aria-hidden="true" role="group" aria-roledescription="slide" tabindex="-1">
         <div class="chapter-head">
           <div class="chapter-bignum" aria-hidden="true">03</div>
           <div>
@@ -126,7 +142,7 @@
         </div>
       </section>
 
-      <section id="capitulo-4" class="chapter audiobook-chapter" aria-labelledby="capitulo-4-title">
+       <section id="capitulo-4" class="chapter audiobook-chapter" aria-labelledby="capitulo-4-title" aria-hidden="true" role="group" aria-roledescription="slide" tabindex="-1">
         <div class="chapter-head">
           <div class="chapter-bignum" aria-hidden="true">04</div>
           <div>
@@ -136,12 +152,12 @@
         </div>
         <div class="audiobook-text">
           <p>O Copilot Chat é uma ferramenta de produtividade que dá sugestões, mas conta com o julgamento humano. Por isso, ao confiar em suas explicações sobre o funcionamento do código e as melhorias propostas, a principal consideração é revisar e validar o que foi gerado, quanto à precisão e à integridade. Entre suas possíveis limitações estão os dados de treinamento limitados e a capacidade restrita de lidar com estruturas de código complexas.</p>
-          <p>Ele é especialmente útil para entender código. Ajuda a compreender uma base de código existente tirando dúvidas sobre o código e gerando explicações. É eficaz para explicar um código Cobol legado e traduzi-lo para outra linguagem, como C sharp, e para criar um cenário de teste de unidade para um código Python recém-desenvolvido. Também aumenta a produtividade quando um desenvolvedor é adicionado a um novo projeto e precisa entender o código do software atual, ou quando é preciso criar um arquivo de documentação para uma base de código recém-criada. Para quem está aprendendo uma nova linguagem, o Chat orienta e apoia nas tarefas e desafios comuns de codificação nessa linguagem, e o Copilot pode converter comentários em código, o que ajuda a compreender a sintaxe e as nuances dela. Dentro de um I D E com um plugin compatível do GitHub Copilot, o Chat pode gerar testes unitários, explicar o código e sugerir melhorias. Para garantir que uma função funcione corretamente, o Chat sugere asserts, ou afirmações, baseadas no contexto e na semântica do código.</p>
-          <p>Para obter retornos mais precisos, é preciso dar contexto. Isso pode ser feito com participantes do chat, como arroba workspace, que incorporam contexto colaborativo, e com variáveis de chat, como hashtag file e hashtag editors, que ancoram a conversa no contexto específico dos arquivos ou editores em uso. Também melhora o contexto abrir as abas relevantes no I D E e adicionar ao prompt os caminhos completos dos arquivos importantes. O histórico do chat tem um papel importante: ele fornece contexto ao Copilot, melhorando a relevância e a precisão das sugestões de código, e é usado para oferecer trechos de código personalizados com base em solicitações anteriores.</p>
+          <p>Ele é especialmente útil para entender código. Ajuda a compreender uma base de código existente tirando dúvidas sobre o código e gerando explicações. É eficaz para explicar um código Cobol legado e traduzi-lo para outra linguagem, como C#, e para criar um cenário de teste de unidade para um código Python recém-desenvolvido. Também aumenta a produtividade quando um desenvolvedor é adicionado a um novo projeto e precisa entender o código do software atual, ou quando é preciso criar um arquivo de documentação para uma base de código recém-criada. Para quem está aprendendo uma nova linguagem, o Chat orienta e apoia nas tarefas e desafios comuns de codificação nessa linguagem, e o Copilot pode converter comentários em código, o que ajuda a compreender a sintaxe e as nuances dela. Dentro de uma IDE com um plugin compatível do GitHub Copilot, o Chat pode gerar testes unitários, explicar o código e sugerir melhorias. Para garantir que uma função funcione corretamente, o Chat sugere asserts, ou afirmações, baseadas no contexto e na semântica do código.</p>
+          <p>Para obter retornos mais precisos, é preciso dar contexto. Isso pode ser feito com participantes do chat, como @workspace, que incorporam contexto colaborativo, e com variáveis de chat, como #file e #editors, que ancoram a conversa no contexto específico dos arquivos ou editores em uso. Também melhora o contexto abrir as abas relevantes na IDE e adicionar ao prompt os caminhos completos dos arquivos importantes. O histórico do chat tem um papel importante: ele fornece contexto ao Copilot, melhorando a relevância e a precisão das sugestões de código, e é usado para oferecer trechos de código personalizados com base em solicitações anteriores.</p>
         </div>
       </section>
 
-      <section id="capitulo-5" class="chapter audiobook-chapter" aria-labelledby="capitulo-5-title">
+       <section id="capitulo-5" class="chapter audiobook-chapter" aria-labelledby="capitulo-5-title" aria-hidden="true" role="group" aria-roledescription="slide" tabindex="-1">
         <div class="chapter-head">
           <div class="chapter-bignum" aria-hidden="true">05</div>
           <div>
@@ -150,14 +166,14 @@
           </div>
         </div>
         <div class="audiobook-text">
-          <p>Os comandos de barra dão atalhos para tarefas comuns no Chat. O comando barra tests cria testes de unidade para o código selecionado, e é o comando a usar ao gerar testes de unidade com o Chat. O comando barra optimize, no Visual Studio, melhora o desempenho do código selecionado analisando sua complexidade de tempo de execução. E o comando barra fix propõe alterações para problemas detectados, sugerindo correções para erros de sintaxe e erros de programação. Para obter sugestões integradas de refatoração, pode-se também adicionar comentários ao código e acionar uma sugestão, ou usar o comando barra fix no chat em linha do GitHub Copilot.</p>
-          <p>Na interface de linha de comando, a C L I, para gerar sugestões de código usa-se G H copilot suggest, escreve-se o comando desejado e, em seguida, seleciona-se a melhor sugestão da lista. O Copilot na C L I também permite definir a confirmação de execução padrão e a análise de uso.</p>
+          <p>Os comandos de barra dão atalhos para tarefas comuns no Chat. O comando /tests cria testes de unidade para o código selecionado, e é o comando a usar ao gerar testes de unidade com o Chat. O comando /optimize, no Visual Studio, melhora o desempenho do código selecionado analisando sua complexidade de tempo de execução. E o comando /fix propõe alterações para problemas detectados, sugerindo correções para erros de sintaxe e erros de programação. Para obter sugestões integradas de refatoração, pode-se também adicionar comentários ao código e acionar uma sugestão, ou usar o comando /fix no chat em linha do GitHub Copilot.</p>
+          <p>Na interface de linha de comando, a CLI, para gerar sugestões de código usa-se gh copilot suggest, escreve-se o comando desejado e, em seguida, seleciona-se a melhor sugestão da lista. O Copilot na CLI também permite definir a confirmação de execução padrão e a análise de uso.</p>
           <p>Nos editores, para ver várias sugestões, abre-se o painel de conclusões. Outras sugestões de código podem ser mostradas em uma nova guia, e atalhos de teclado permitem aceitar a próxima palavra de uma sugestão.</p>
-          <p>Por fim, o feedback sobre o Copilot Chat pode ser dado de duas formas: no I D E, pelo botão Compartilhar feedback no painel do Chat, e no GitHub Mobile, pelos emojis na interface do Chat.</p>
+          <p>Por fim, o feedback sobre o Copilot Chat pode ser dado de duas formas: na IDE, pelo botão Compartilhar feedback no painel do Chat, e no GitHub Mobile, pelos emojis na interface do Chat.</p>
         </div>
       </section>
 
-      <section id="capitulo-6" class="chapter audiobook-chapter" aria-labelledby="capitulo-6-title">
+       <section id="capitulo-6" class="chapter audiobook-chapter" aria-labelledby="capitulo-6-title" aria-hidden="true" role="group" aria-roledescription="slide" tabindex="-1">
         <div class="chapter-head">
           <div class="chapter-bignum" aria-hidden="true">06</div>
           <div>
@@ -166,11 +182,11 @@
           </div>
         </div>
         <div class="audiobook-text">
-          <p>O Copilot Enterprise reúne recursos avançados. Em todos os I D Es com suporte comercial, estão disponíveis as sugestões embutidas, as chamadas sugestões inline. As bases de conhecimento, as knowledge bases, são um recurso exclusivo do plano Enterprise, e podem tirar dúvidas sobre trechos de código, documentação e padrões de design. Com os modelos personalizados, o Copilot produz retornos que usam as práticas e os padrões dos repositórios da própria organização. Nas revisões de código durante o processo de pull request, o Enterprise gera um resumo em prosa e uma lista com marcadores das principais alterações de todas as pull requests, e também pode tirar dúvidas sobre o conjunto de alterações.</p>
+          <p>O Copilot Enterprise reúne recursos avançados. Em todas as IDEs com suporte comercial, estão disponíveis as sugestões embutidas, as chamadas sugestões inline. As bases de conhecimento, as knowledge bases, são um recurso exclusivo do plano Enterprise, e podem tirar dúvidas sobre trechos de código, documentação e padrões de design. Com os modelos personalizados, o Copilot produz retornos que usam as práticas e os padrões dos repositórios da própria organização. Nas revisões de código durante o processo de pull request, o Enterprise gera um resumo em prosa e uma lista com marcadores das principais alterações de todas as pull requests, e também pode tirar dúvidas sobre o conjunto de alterações.</p>
         </div>
       </section>
 
-      <section id="capitulo-7" class="chapter audiobook-chapter" aria-labelledby="capitulo-7-title">
+       <section id="capitulo-7" class="chapter audiobook-chapter" aria-labelledby="capitulo-7-title" aria-hidden="true" role="group" aria-roledescription="slide" tabindex="-1">
         <div class="chapter-head">
           <div class="chapter-bignum" aria-hidden="true">07</div>
           <div>
@@ -180,13 +196,13 @@
         </div>
         <div class="audiobook-text">
           <p>A gestão do Copilot em uma organização passa por políticas, exclusões de conteúdo, auditoria e métricas. Para restringir o uso do Copilot Business a determinados repositórios, a política em toda a organização é configurada nas configurações da organização.</p>
-          <p>Sobre as exclusões de conteúdo: podem ser configurados para exclusão arquivos, pastas e repositórios. Para excluir arquivos específicos do uso do Copilot Business, eles são adicionados a um arquivo copilot ponto ignore. O conteúdo excluído deixa de estar disponível diretamente para o Copilot como contexto, e as sugestões do Copilot não aparecem mais nos arquivos excluídos. Ainda assim, o Copilot pode usar conteúdo excluído se o conteúdo de um arquivo excluído for referenciado em código que não foi excluído, por exemplo, em chamadas de função. Uma limitação das exclusões é que elas podem ser contornadas, pois estão disponíveis apenas para repositórios Git. A exclusão de conteúdo leva até 30 minutos para ser adicionada ou atualizada. Se as exclusões não estiverem funcionando, deve-se verificar se o usuário está em uma organização que tem exclusões de conteúdo configuradas, e se as configurações de exclusão de conteúdo foram alteradas nos últimos 30 minutos ou antes disso. Para validar que o Copilot não está retornando sugestões por causa das exclusões, o ícone do GitHub Copilot na barra de status do editor exibe uma mensagem.</p>
+          <p>Sobre as exclusões de conteúdo: podem ser configurados para exclusão arquivos, pastas e repositórios. Para excluir arquivos específicos do uso do Copilot Business, eles são adicionados a um arquivo copilot.ignore. O conteúdo excluído deixa de estar disponível diretamente para o Copilot como contexto, e as sugestões do Copilot não aparecem mais nos arquivos excluídos. Ainda assim, o Copilot pode usar conteúdo excluído se o conteúdo de um arquivo excluído for referenciado em código que não foi excluído, por exemplo, em chamadas de função. Uma limitação das exclusões é que elas podem ser contornadas, pois estão disponíveis apenas para repositórios Git. A exclusão de conteúdo leva até 30 minutos para ser adicionada ou atualizada. Se as exclusões não estiverem funcionando, deve-se verificar se o usuário está em uma organização que tem exclusões de conteúdo configuradas, e se as configurações de exclusão de conteúdo foram alteradas nos últimos 30 minutos ou antes disso. Para validar que o Copilot não está retornando sugestões por causa das exclusões, o ícone do GitHub Copilot na barra de status do editor exibe uma mensagem.</p>
           <p>Na auditoria, os eventos de log de auditoria do Copilot Business são acessados pela seção Log de auditoria, nas configurações do GitHub da organização. O objetivo principal dos logs de auditoria da organização é monitorar atividades e ações do administrador dentro da organização. Entre as atividades que podem ser rastreadas estão as sugestões de código feitas pelo GitHub Copilot e as mudanças nas configurações de exclusão de conteúdo.</p>
-          <p>Quanto às métricas, a A P I de métricas de uso pode rastrear o número de sugestões de código aceitas e usadas na organização, e também fornecer métricas de aceitação de sugestões específicas do Copilot Chat. Esses insights mostram, por exemplo, em quais linguagens de codificação o Copilot é mais útil, e assim ajudam a melhorar o processo de desenvolvimento. Já a A P I Rest permite, para as assinaturas do Copilot Business, listar todas as atribuições de licença de uma organização e obter um resumo do uso do Copilot pelos membros da organização. Para modificar detalhes de uma assinatura do Copilot Business, os endpoints da A P I Rest permitem adicionar equipes à assinatura do Copilot de uma organização e remover equipes dessa assinatura.</p>
+          <p>Quanto às métricas, a API de métricas de uso pode rastrear o número de sugestões de código aceitas e usadas na organização, e também fornecer métricas de aceitação de sugestões específicas do Copilot Chat. Esses insights mostram, por exemplo, em quais linguagens de codificação o Copilot é mais útil, e assim ajudam a melhorar o processo de desenvolvimento. Já a API REST permite, para as assinaturas do Copilot Business, listar todas as atribuições de licença de uma organização e obter um resumo do uso do Copilot pelos membros da organização. Para modificar detalhes de uma assinatura do Copilot Business, os endpoints da API REST permitem adicionar equipes à assinatura do Copilot de uma organização e remover equipes dessa assinatura.</p>
         </div>
       </section>
 
-      <section id="capitulo-8" class="chapter audiobook-chapter" aria-labelledby="capitulo-8-title">
+       <section id="capitulo-8" class="chapter audiobook-chapter" aria-labelledby="capitulo-8-title" aria-hidden="true" role="group" aria-roledescription="slide" tabindex="-1">
         <div class="chapter-head">
           <div class="chapter-bignum" aria-hidden="true">08</div>
           <div>
@@ -196,12 +212,12 @@
         </div>
         <div class="audiobook-text">
           <p>Um tema central de segurança é o código público. O filtro de detecção de duplicação do Copilot pode ser configurado no nível da organização para evitar que o Copilot sugira trechos de código disponíveis publicamente. O objetivo principal do filtro é detectar e bloquear sugestões que correspondam a trechos de código público no GitHub, se contiverem cerca de 150 caracteres. O processo funciona executando as sugestões de código por meio de filtros projetados para detectar código público. Além disso, o Copilot filtra sugestões que correspondam ao código de repositórios públicos e implementa salvaguardas para detectar e evitar a sugestão de trechos literais de código público. Antes de a sugestão chegar ao usuário, há verificações adicionais: a correspondência com código público, opcional conforme as configurações, e a compatibilidade com configurações específicas do usuário. Para configurar a detecção de duplicatas, há dois caminhos: Configurações empresariais, depois Copilot, depois Políticas; ou Configurações da organização, depois Copilot, depois Políticas.</p>
-          <p>Para ter a ajuda da Microsoft e do GitHub na proteção contra violação de I P, é preciso bloquear as correspondências de código público: a configuração de sugestões que correspondem ao código público deve ser definida como bloqueado.</p>
-          <p>O filtro de toxicidade do Copilot pode sinalizar prompts ou trechos de código com discurso de ódio ou linguagem discriminatória, como insultos raciais e estereótipos ofensivos, e também conteúdo sexualmente sugestivo ou explícito. Garantir a segurança do código usado em ferramentas de I A generativa evita acesso não autorizado e possíveis violações de dados. E o Copilot Chat ajuda a corrigir problemas de segurança na base de código anotando as sugestões que fornece com padrões de vulnerabilidade conhecidos.</p>
+          <p>Para ter a ajuda da Microsoft e do GitHub na proteção contra violação de IP, é preciso bloquear as correspondências de código público: a configuração de sugestões que correspondem ao código público deve ser definida como bloqueado.</p>
+          <p>O filtro de toxicidade do Copilot pode sinalizar prompts ou trechos de código com discurso de ódio ou linguagem discriminatória, como insultos raciais e estereótipos ofensivos, e também conteúdo sexualmente sugestivo ou explícito. Garantir a segurança do código usado em ferramentas de IA generativa evita acesso não autorizado e possíveis violações de dados. E o Copilot Chat ajuda a corrigir problemas de segurança na base de código anotando as sugestões que fornece com padrões de vulnerabilidade conhecidos.</p>
         </div>
       </section>
 
-      <section id="capitulo-9" class="chapter audiobook-chapter" aria-labelledby="capitulo-9-title">
+       <section id="capitulo-9" class="chapter audiobook-chapter" aria-labelledby="capitulo-9-title" aria-hidden="true" role="group" aria-roledescription="slide" tabindex="-1">
         <div class="chapter-head">
           <div class="chapter-bignum" aria-hidden="true">09</div>
           <div>
@@ -210,12 +226,12 @@
           </div>
         </div>
         <div class="audiobook-text">
-          <p>O uso responsável da I A começa por entender seus riscos. Um deles é que os sistemas de I A podem, por vezes, tomar decisões difíceis de interpretar. Outro é a imprecisão: uma ferramenta de I A generativa pode criar resultados imprecisos porque os dados de treinamento podem conter preconceitos ou inconsistências. Para minimizar preconceitos durante o desenvolvimento da I A, usam-se dados diversos, métricas de justiça e supervisão humana. O desenvolvedor também deve ter cuidado ao usar o Copilot para cálculos matemáticos, evitando depender de retornos baseados em padrões sem verificar a precisão do cálculo.</p>
-          <p>Entre os princípios éticos de I A da Microsoft, a justiça, ou Fairness, visa garantir que os sistemas de I A tratem todas as pessoas igualmente. Na operação de uma ferramenta de I A, a justiça pode ser integrada treinando dados e algoritmos de I A para serem livres de preconceitos. Já a transparência é o princípio que enfatiza que os sistemas de I A devem ser compreensíveis e fornecer informações claras sobre como funcionam. Um exemplo: um gerente de mídia social que quer usar I A para filtrar conteúdo aplica a transparência ao fornecer explicações claras sobre os tipos de conteúdo que a I A foi projetada para filtrar e sobre como ela chega à sua conclusão.</p>
+          <p>O uso responsável da IA começa por entender seus riscos. Um deles é que os sistemas de IA podem, por vezes, tomar decisões difíceis de interpretar. Outro é a imprecisão: uma ferramenta de IA generativa pode criar resultados imprecisos porque os dados de treinamento podem conter preconceitos ou inconsistências. Para minimizar preconceitos durante o desenvolvimento da IA, usam-se dados diversos, métricas de justiça e supervisão humana. O desenvolvedor também deve ter cuidado ao usar o Copilot para cálculos matemáticos, evitando depender de retornos baseados em padrões sem verificar a precisão do cálculo.</p>
+          <p>Entre os princípios éticos de IA da Microsoft, a justiça, ou Fairness, visa garantir que os sistemas de IA tratem todas as pessoas igualmente. Na operação de uma ferramenta de IA, a justiça pode ser integrada treinando dados e algoritmos de IA para serem livres de preconceitos. Já a transparência é o princípio que enfatiza que os sistemas de IA devem ser compreensíveis e fornecer informações claras sobre como funcionam. Um exemplo: um gerente de mídia social que quer usar IA para filtrar conteúdo aplica a transparência ao fornecer explicações claras sobre os tipos de conteúdo que a IA foi projetada para filtrar e sobre como ela chega à sua conclusão.</p>
         </div>
       </section>
 
-      <section id="capitulo-10" class="chapter audiobook-chapter" aria-labelledby="capitulo-10-title">
+       <section id="capitulo-10" class="chapter audiobook-chapter" aria-labelledby="capitulo-10-title" aria-hidden="true" role="group" aria-roledescription="slide" tabindex="-1">
         <div class="chapter-head">
           <div class="chapter-bignum" aria-hidden="true">10</div>
           <div>
@@ -224,23 +240,225 @@
           </div>
         </div>
         <div class="audiobook-text">
-          <p>O Copilot pode ajudar em cada fase do Ciclo de Vida de Desenvolvimento de Software, o S D L C. Na análise de requisitos, ele fornece modelos e trechos de código que auxiliam na documentação dos requisitos. Na fase de design, pode sugerir padrões de design e práticas recomendadas relevantes para o projeto.</p>
-          <p>Na escrita do código, o Copilot ajuda os desenvolvedores a reduzir a quantidade de código padrão, o boilerplate, que precisam escrever manualmente, sugerindo trechos de código que podem ser reutilizados em diferentes partes do projeto. Também sugere otimizações para melhorar o desempenho, analisando a base de código e sugerindo algoritmos ou estruturas de dados mais eficientes. Ajuda a escrever documentação, sugerindo resumos ou descrições com base na funcionalidade do código. E reduz a alternância de contexto, porque permite que os desenvolvedores permaneçam no I D E. Na modernização de aplicativos, o Copilot pode sugerir padrões de programação modernos com base no código do desenvolvedor. Para gerar dados de amostra, um método é usar a capacidade do Copilot de criar informações fictícias a partir de padrões nos dados de treinamento; outro é aproveitar suas sugestões para criar dados com base na documentação da A P I no repositório.</p>
+          <p>O Copilot pode ajudar em cada fase do Ciclo de Vida de Desenvolvimento de Software, o SDLC. Na análise de requisitos, ele fornece modelos e trechos de código que auxiliam na documentação dos requisitos. Na fase de design, pode sugerir padrões de design e práticas recomendadas relevantes para o projeto.</p>
+          <p>Na escrita do código, o Copilot ajuda os desenvolvedores a reduzir a quantidade de código padrão, o boilerplate, que precisam escrever manualmente, sugerindo trechos de código que podem ser reutilizados em diferentes partes do projeto. Também sugere otimizações para melhorar o desempenho, analisando a base de código e sugerindo algoritmos ou estruturas de dados mais eficientes. Ajuda a escrever documentação, sugerindo resumos ou descrições com base na funcionalidade do código. E reduz a alternância de contexto, porque permite que os desenvolvedores permaneçam na IDE. Na modernização de aplicativos, o Copilot pode sugerir padrões de programação modernos com base no código do desenvolvedor. Para gerar dados de amostra, um método é usar a capacidade do Copilot de criar informações fictícias a partir de padrões nos dados de treinamento; outro é aproveitar suas sugestões para criar dados com base na documentação da API no repositório.</p>
           <p>Na refatoração, o Copilot pode sugerir melhorias para uma melhor qualidade de código, fornecendo sugestões para melhorar a legibilidade e a manutenção com base nas melhores práticas e oferecendo exemplos de transformação de código que melhoram o desempenho e reduzem a complexidade. Para orientar o Copilot Chat nessa tarefa, servem prompts como pedir que mostre como melhorar a legibilidade de uma função, ou que sugira maneiras de melhorar a capacidade de manutenção de um trecho de código. Há, porém, limitações: o Copilot nem sempre produz código otimizado ou alinhado às melhores práticas de refatoração. Uma boa prática é revisar e refatorar regularmente o código sugerido pelo Copilot.</p>
           <p>Nos testes, o Copilot ajuda a manter a consistência identificando um padrão na maneira como o desenvolvedor escreve testes e sugerindo padrões semelhantes para testes futuros. Para identificar testes ausentes na base de código, o fator mais importante é garantir que o contexto correto do projeto esteja disponível para o Copilot. Mas há limites: ele sugere principalmente testes de unidade básicos, focados nas funcionalidades principais, muitas vezes exigindo informações adicionais dos desenvolvedores para uma cobertura abrangente. Por isso, a revisão de código continua necessária, porque os casos de teste gerados podem não cobrir todos os cenários possíveis.</p>
           <p>Quem depende muito do código gerado corre riscos: o Copilot pode introduzir vulnerabilidades de segurança ao sugerir código com explorações conhecidas, e suas sugestões nem sempre refletem as práticas recomendadas ou os padrões de codificação mais recentes. Em análises estatísticas, é preciso lembrar que as sugestões se baseiam em tendências estatísticas e nem sempre se aplicam com precisão a conjuntos de dados específicos. E, na manutenção de bases de código existentes, o Copilot pode não compreender totalmente o contexto e as dependências de uma base de código grande.</p>
-        </div>
-      </section>
+         </div>
+         <div class="audiobook-ending audiobook-text">
+           <p>Fim do áudio. Bons estudos!</p>
+         </div>
+       </section>
 
-      <div class="audiobook-ending audiobook-text">
-        <p>Fim do áudio. Bons estudos!</p>
-      </div>
-    </article>
+        </div>
+        <div class="carousel-controls" aria-label="Controles de navegação dos capítulos">
+          <button id="chapter-prev" class="carousel-button" type="button" aria-label="Ir para o capítulo anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 12H5"></path>
+              <path d="M12 19l-7-7 7-7"></path>
+            </svg>
+            <span>Anterior</span>
+          </button>
+          <span class="carousel-hint">Use as setas ou deslize</span>
+          <button id="chapter-next" class="carousel-button" type="button" aria-label="Ir para o próximo capítulo">
+            <span>Próximo</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </article>
+    </div>
   </div>
-</main>
+ </main>
 
 <footer class="site-footer">
   <p>Material de estudo não oficial para a certificação <strong>GitHub Copilot GH-300</strong>.</p>
 </footer>
+
+<script>
+(function() {
+  'use strict';
+
+  const carousel = document.querySelector('#audiobook-carousel');
+  if (!carousel) return;
+
+  const stage = carousel.querySelector('#chapter-stage');
+  const chapters = [...carousel.querySelectorAll('.audiobook-chapter')];
+  const navLinks = [...carousel.querySelectorAll('.chapter-nav a[data-chapter]')];
+  const menuToggle = carousel.querySelector('#chapter-menu-toggle');
+  const menuClose = carousel.querySelector('.chapter-menu-close');
+  const menuBackdrop = carousel.querySelector('.chapter-menu-backdrop');
+  const previousButton = carousel.querySelector('#chapter-prev');
+  const nextButton = carousel.querySelector('#chapter-next');
+  const currentLabel = carousel.querySelector('#carousel-current');
+  const totalLabel = carousel.querySelector('#carousel-total');
+  let currentIndex = 0;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let lastFocusedElement = null;
+
+  totalLabel.textContent = String(chapters.length).padStart(2, '0');
+
+  function indexForId(id) {
+    const index = chapters.findIndex(chapter => chapter.id === id);
+    return index >= 0 ? index : 0;
+  }
+
+  function closeMenu(restoreFocus = true) {
+    carousel.classList.remove('menu-open');
+    document.body.classList.remove('chapter-menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuBackdrop.setAttribute('aria-hidden', 'true');
+    if (restoreFocus && lastFocusedElement) {
+      lastFocusedElement.focus();
+      lastFocusedElement = null;
+    }
+  }
+
+  function openMenu() {
+    lastFocusedElement = document.activeElement;
+    carousel.classList.add('menu-open');
+    document.body.classList.add('chapter-menu-open');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    menuBackdrop.setAttribute('aria-hidden', 'false');
+    menuClose.focus();
+  }
+
+  function updateHistory(id, replace = false) {
+    const url = `${window.location.pathname}${window.location.search}#${id}`;
+    if (replace) {
+      window.history.replaceState(null, '', url);
+    } else if (window.location.hash !== `#${id}`) {
+      window.history.pushState(null, '', url);
+    }
+  }
+
+  function showChapter(index, options = {}) {
+    const { updateUrl = true, replaceUrl = false, shouldScroll = true } = options;
+    const nextIndex = Math.max(0, Math.min(index, chapters.length - 1));
+    currentIndex = nextIndex;
+
+    chapters.forEach((chapter, chapterIndex) => {
+      const isActive = chapterIndex === currentIndex;
+      chapter.classList.toggle('is-active', isActive);
+      chapter.setAttribute('aria-hidden', String(!isActive));
+    });
+
+    navLinks.forEach((link, linkIndex) => {
+      const isCurrent = linkIndex === currentIndex;
+      link.classList.toggle('current', isCurrent);
+      if (isCurrent) {
+        link.setAttribute('aria-current', 'step');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+
+    currentLabel.textContent = String(currentIndex + 1).padStart(2, '0');
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === chapters.length - 1;
+
+    if (updateUrl) updateHistory(chapters[currentIndex].id, replaceUrl);
+    if (shouldScroll) carousel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    chapters[currentIndex].focus({ preventScroll: true });
+  }
+
+  function navigateTo(index) {
+    showChapter(index);
+    closeMenu(false);
+  }
+
+  menuToggle.addEventListener('click', () => {
+    if (carousel.classList.contains('menu-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  menuClose.addEventListener('click', () => closeMenu());
+  menuBackdrop.addEventListener('click', () => closeMenu());
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860 && carousel.classList.contains('menu-open')) closeMenu(false);
+  });
+
+  navLinks.forEach((link, index) => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      navigateTo(index);
+    });
+  });
+
+  previousButton.addEventListener('click', () => {
+    if (currentIndex > 0) navigateTo(currentIndex - 1);
+  });
+
+  nextButton.addEventListener('click', () => {
+    if (currentIndex < chapters.length - 1) navigateTo(currentIndex + 1);
+  });
+
+  stage.addEventListener('touchstart', event => {
+    const touch = event.changedTouches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+  }, { passive: true });
+
+  stage.addEventListener('touchend', event => {
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - touchStartX;
+    const deltaY = touch.clientY - touchStartY;
+    if (Math.abs(deltaX) < 50 || Math.abs(deltaX) <= Math.abs(deltaY)) return;
+    if (deltaX < 0 && currentIndex < chapters.length - 1) navigateTo(currentIndex + 1);
+    if (deltaX > 0 && currentIndex > 0) navigateTo(currentIndex - 1);
+  }, { passive: true });
+
+  document.addEventListener('keydown', event => {
+    const target = event.target;
+    const isTyping = target.matches('input, textarea, select, [contenteditable="true"]');
+    if (isTyping) return;
+
+    if (event.key === 'Escape' && carousel.classList.contains('menu-open')) {
+      event.preventDefault();
+      closeMenu();
+      return;
+    }
+
+    if (event.key === 'ArrowLeft' && currentIndex > 0) {
+      event.preventDefault();
+      navigateTo(currentIndex - 1);
+    }
+
+    if (event.key === 'ArrowRight' && currentIndex < chapters.length - 1) {
+      event.preventDefault();
+      navigateTo(currentIndex + 1);
+    }
+
+    if (event.key === 'Home') {
+      event.preventDefault();
+      navigateTo(0);
+    }
+
+    if (event.key === 'End') {
+      event.preventDefault();
+      navigateTo(chapters.length - 1);
+    }
+  });
+
+  function syncChapterFromLocation() {
+    closeMenu(false);
+    showChapter(indexForId(window.location.hash.slice(1)), { updateUrl: false });
+  }
+
+  window.addEventListener('popstate', syncChapterFromLocation);
+  window.addEventListener('hashchange', syncChapterFromLocation);
+
+  const initialIndex = window.location.hash ? indexForId(window.location.hash.slice(1)) : 0;
+  showChapter(initialIndex, { updateUrl: Boolean(window.location.hash), shouldScroll: false });
+})();
+</script>
 </body>
 </html>
