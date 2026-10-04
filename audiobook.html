@@ -103,6 +103,15 @@
             <h3 id="capitulo-1-title">Como o GitHub Copilot Funciona</h3>
           </div>
         </div>
+        <details class="chapter-diagram">
+          <summary><span class="diagram-show-label">Mostrar diagrama</span><span class="diagram-hide-label">Ocultar diagrama</span></summary>
+          <figure>
+            <a class="chapter-diagram-link" href="assets/audiobook/diagrams/cap01_como_o_copilot_funciona.svg" target="_blank" rel="noopener" aria-label="Abrir o diagrama sobre como o GitHub Copilot gera uma sugestão em nova aba">
+              <img src="assets/audiobook/diagrams/cap01_como_o_copilot_funciona.svg" alt="Diagrama do fluxo de contexto na IDE até o proxy do Copilot no Azure, o modelo de linguagem e a sugestão, incluindo FIM e causas de sugestões ausentes." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Como o GitHub Copilot gera uma sugestão.</figcaption>
+          </figure>
+        </details>
         <div class="audiobook-text">
           <p>O GitHub Copilot é um assistente que ajuda a escrever código, e há mais de uma forma de interagir com ele. Uma delas é diretamente pelo navegador, acessando github.com. O serviço de proxy do Copilot é hospedado no Microsoft Azure.</p>
           <p>Para sugerir algo útil, o Copilot depende de contexto. Na IDE, ele usa informações como as abas abertas, a posição do cursor e o código selecionado. O modelo de linguagem, o LLM, também deriva contexto de arquivos vizinhos ou relacionados dentro do projeto. No Copilot Chat, existe ainda uma etapa de pré-processamento da entrada do usuário, que enriquece o prompt com contexto adicional antes de passá-lo ao modelo de linguagem. Entre as etapas do ciclo de vida de uma sugestão estão capturar o contexto do usuário e gerar a sugestão. A técnica Fill in the Middle, ou FIM, melhora as sugestões ao considerar tanto o prefixo quanto o sufixo do código, preenchendo a parte intermediária com mais precisão.</p>
@@ -119,6 +128,15 @@
             <h3 id="capitulo-2-title">Planos, Preços e Cobrança</h3>
           </div>
         </div>
+        <details class="chapter-diagram">
+          <summary><span class="diagram-show-label">Mostrar diagrama</span><span class="diagram-hide-label">Ocultar diagrama</span></summary>
+          <figure>
+            <a class="chapter-diagram-link" href="assets/audiobook/diagrams/cap02_planos_precos_cobranca.svg" target="_blank" rel="noopener" aria-label="Abrir o diagrama sobre os planos do GitHub Copilot em nova aba">
+              <img src="assets/audiobook/diagrams/cap02_planos_precos_cobranca.svg" alt="Diagrama dos planos Individual, Business e Enterprise do GitHub Copilot e do uso e retenção de dados." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Planos do GitHub Copilot: Individual, Business e Enterprise.</figcaption>
+          </figure>
+        </details>
         <div class="audiobook-text">
           <p>O GitHub Copilot Individual é cobrado de duas formas: mensalmente, como assinatura, ou anualmente, também como assinatura. Para quem trabalha em projetos de código aberto, o pagamento pode ser feito por fatura ou cartão de crédito. O Individual é o plano indicado para um contratante independente que desenvolve aplicativos para diversos clientes. Uma organização do Azure DevOps também pode usá-lo, sem precisar de uma licença do GitHub Enterprise. Quanto aos dados, o Individual usa os dados de prompt para treinar modelos de aprendizado de máquina, em busca de sugestões de código melhores, e a entrada do usuário em tempo real ajuda a gerar sugestões sensíveis ao contexto. Ao usar uma extensão compatível para Visual Studio, VS Code ou IDEs da JetBrains, ficam disponíveis as sugestões de código e o Chat.</p>
           <p>Quando a equipe usa o Individual e precisa de recursos administrativos e de exclusão de conteúdo, o caminho é atualizar para o Copilot Business. O Business também é o plano para uma empresa que guarda seu código no Bitbucket e quer usar o Copilot, no caso de clientes que não usam o GHE.</p>
@@ -135,6 +153,15 @@
             <h3 id="capitulo-3-title">Engenharia de Prompt</h3>
           </div>
         </div>
+        <details class="chapter-diagram">
+          <summary><span class="diagram-show-label">Mostrar diagrama</span><span class="diagram-hide-label">Ocultar diagrama</span></summary>
+          <figure>
+            <a class="chapter-diagram-link" href="assets/audiobook/diagrams/cap03_engenharia_de_prompt.svg" target="_blank" rel="noopener" aria-label="Abrir o diagrama sobre estilos e boas práticas de prompt em nova aba">
+              <img src="assets/audiobook/diagrams/cap03_engenharia_de_prompt.svg" alt="Diagrama dos estilos zero shot, few shot e role prompting, com boas práticas para melhorar prompts." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Estilos de prompt e boas práticas.</figcaption>
+          </figure>
+        </details>
         <div class="audiobook-text">
           <p>A qualidade do que o Copilot sugere depende bastante de como o prompt é escrito. Duas técnicas para melhorá-lo são fornecer critérios de sucesso específicos e informar onde obter o conteúdo necessário. As práticas que melhoram a qualidade das sugestões incluem definir claramente o problema ou a tarefa, usar nomes de variáveis significativos e fornecer exemplos dos resultados desejados. Aplicar técnicas de engenharia de prompt para ser mais específico é também uma estratégia para aumentar o desempenho do Copilot Chat.</p>
           <p>Existem estilos de prompt com nomes próprios. No zero shot prompting, ou prompt de disparo zero, basta apresentar o pedido ao Copilot, sem nenhum exemplo. No few shot prompting, ou prompt de poucos disparos, o desenvolvedor informa o mecanismo que quer usar e como incorporá-lo ao resultado, fornecendo exemplos. Já no role prompting, descreve-se no prompt qual é a função de quem pede, para obter uma sugestão melhor.</p>
@@ -150,6 +177,15 @@
             <h3 id="capitulo-4-title">GitHub Copilot Chat</h3>
           </div>
         </div>
+        <details class="chapter-diagram">
+          <summary><span class="diagram-show-label">Mostrar diagrama</span><span class="diagram-hide-label">Ocultar diagrama</span></summary>
+          <figure>
+            <a class="chapter-diagram-link" href="assets/audiobook/diagrams/cap04_github_copilot_chat.svg" target="_blank" rel="noopener" aria-label="Abrir o diagrama sobre contexto, usos e revisão humana do Copilot Chat em nova aba">
+              <img src="assets/audiobook/diagrams/cap04_github_copilot_chat.svg" alt="Diagrama com formas de fornecer contexto ao Copilot Chat, usos principais e a etapa de revisão humana." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Copilot Chat: contexto, usos e revisão humana.</figcaption>
+          </figure>
+        </details>
         <div class="audiobook-text">
           <p>O Copilot Chat é uma ferramenta de produtividade que dá sugestões, mas conta com o julgamento humano. Por isso, ao confiar em suas explicações sobre o funcionamento do código e as melhorias propostas, a principal consideração é revisar e validar o que foi gerado, quanto à precisão e à integridade. Entre suas possíveis limitações estão os dados de treinamento limitados e a capacidade restrita de lidar com estruturas de código complexas.</p>
           <p>Ele é especialmente útil para entender código. Ajuda a compreender uma base de código existente tirando dúvidas sobre o código e gerando explicações. É eficaz para explicar um código Cobol legado e traduzi-lo para outra linguagem, como C#, e para criar um cenário de teste de unidade para um código Python recém-desenvolvido. Também aumenta a produtividade quando um desenvolvedor é adicionado a um novo projeto e precisa entender o código do software atual, ou quando é preciso criar um arquivo de documentação para uma base de código recém-criada. Para quem está aprendendo uma nova linguagem, o Chat orienta e apoia nas tarefas e desafios comuns de codificação nessa linguagem, e o Copilot pode converter comentários em código, o que ajuda a compreender a sintaxe e as nuances dela. Dentro de uma IDE com um plugin compatível do GitHub Copilot, o Chat pode gerar testes unitários, explicar o código e sugerir melhorias. Para garantir que uma função funcione corretamente, o Chat sugere asserts, ou afirmações, baseadas no contexto e na semântica do código.</p>
@@ -165,6 +201,15 @@
             <h3 id="capitulo-5-title">Comandos de Barra, CLI e Sugestões</h3>
           </div>
         </div>
+        <details class="chapter-diagram">
+          <summary><span class="diagram-show-label">Mostrar diagrama</span><span class="diagram-hide-label">Ocultar diagrama</span></summary>
+          <figure>
+            <a class="chapter-diagram-link" href="assets/audiobook/diagrams/cap05_comandos_cli_sugestoes.svg" target="_blank" rel="noopener" aria-label="Abrir o diagrama sobre comandos, CLI, sugestões e feedback em nova aba">
+              <img src="assets/audiobook/diagrams/cap05_comandos_cli_sugestoes.svg" alt="Diagrama com comandos de barra do Chat, gh copilot suggest, sugestões no editor e formas de enviar feedback." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Comandos de barra, CLI, sugestões no editor e feedback.</figcaption>
+          </figure>
+        </details>
         <div class="audiobook-text">
           <p>Os comandos de barra dão atalhos para tarefas comuns no Chat. O comando /tests cria testes de unidade para o código selecionado, e é o comando a usar ao gerar testes de unidade com o Chat. O comando /optimize, no Visual Studio, melhora o desempenho do código selecionado analisando sua complexidade de tempo de execução. E o comando /fix propõe alterações para problemas detectados, sugerindo correções para erros de sintaxe e erros de programação. Para obter sugestões integradas de refatoração, pode-se também adicionar comentários ao código e acionar uma sugestão, ou usar o comando /fix no chat em linha do GitHub Copilot.</p>
           <p>Na interface de linha de comando, a CLI, para gerar sugestões de código usa-se gh copilot suggest, escreve-se o comando desejado e, em seguida, seleciona-se a melhor sugestão da lista. O Copilot na CLI também permite definir a confirmação de execução padrão e a análise de uso.</p>
@@ -181,6 +226,15 @@
             <h3 id="capitulo-6-title">Copilot Enterprise: Recursos Avançados</h3>
           </div>
         </div>
+        <details class="chapter-diagram">
+          <summary><span class="diagram-show-label">Mostrar diagrama</span><span class="diagram-hide-label">Ocultar diagrama</span></summary>
+          <figure>
+            <a class="chapter-diagram-link" href="assets/audiobook/diagrams/cap06_copilot_enterprise_recursos.svg" target="_blank" rel="noopener" aria-label="Abrir o diagrama sobre recursos avançados do Copilot Enterprise em nova aba">
+              <img src="assets/audiobook/diagrams/cap06_copilot_enterprise_recursos.svg" alt="Diagrama dos recursos avançados do Copilot Enterprise: bases de conhecimento, revisões de pull request, sugestões inline e modelos personalizados." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Recursos avançados do Copilot Enterprise.</figcaption>
+          </figure>
+        </details>
         <div class="audiobook-text">
           <p>O Copilot Enterprise reúne recursos avançados. Em todas as IDEs com suporte comercial, estão disponíveis as sugestões embutidas, as chamadas sugestões inline. As bases de conhecimento, as knowledge bases, são um recurso exclusivo do plano Enterprise, e podem tirar dúvidas sobre trechos de código, documentação e padrões de design. Com os modelos personalizados, o Copilot produz retornos que usam as práticas e os padrões dos repositórios da própria organização. Nas revisões de código durante o processo de pull request, o Enterprise gera um resumo em prosa e uma lista com marcadores das principais alterações de todas as pull requests, e também pode tirar dúvidas sobre o conjunto de alterações.</p>
         </div>
@@ -194,6 +248,15 @@
             <h3 id="capitulo-7-title">Gestão: Políticas, Exclusões e Auditoria</h3>
           </div>
         </div>
+        <details class="chapter-diagram">
+          <summary><span class="diagram-show-label">Mostrar diagrama</span><span class="diagram-hide-label">Ocultar diagrama</span></summary>
+          <figure>
+            <a class="chapter-diagram-link" href="assets/audiobook/diagrams/cap07_gestao_politicas_exclusoes_auditoria.svg" target="_blank" rel="noopener" aria-label="Abrir o diagrama sobre gestão do Copilot em nova aba">
+              <img src="assets/audiobook/diagrams/cap07_gestao_politicas_exclusoes_auditoria.svg" alt="Diagrama dos pilares de gestão do Copilot: políticas, exclusões de conteúdo, auditoria e métricas." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Gestão do Copilot: políticas, exclusões, auditoria e métricas.</figcaption>
+          </figure>
+        </details>
         <div class="audiobook-text">
           <p>A gestão do Copilot em uma organização passa por políticas, exclusões de conteúdo, auditoria e métricas. Para restringir o uso do Copilot Business a determinados repositórios, a política em toda a organização é configurada nas configurações da organização.</p>
           <p>Sobre as exclusões de conteúdo: podem ser configurados para exclusão arquivos, pastas e repositórios. Para excluir arquivos específicos do uso do Copilot Business, eles são adicionados a um arquivo copilot.ignore. O conteúdo excluído deixa de estar disponível diretamente para o Copilot como contexto, e as sugestões do Copilot não aparecem mais nos arquivos excluídos. Ainda assim, o Copilot pode usar conteúdo excluído se o conteúdo de um arquivo excluído for referenciado em código que não foi excluído, por exemplo, em chamadas de função. Uma limitação das exclusões é que elas podem ser contornadas, pois estão disponíveis apenas para repositórios Git. A exclusão de conteúdo leva até 30 minutos para ser adicionada ou atualizada. Se as exclusões não estiverem funcionando, deve-se verificar se o usuário está em uma organização que tem exclusões de conteúdo configuradas, e se as configurações de exclusão de conteúdo foram alteradas nos últimos 30 minutos ou antes disso. Para validar que o Copilot não está retornando sugestões por causa das exclusões, o ícone do GitHub Copilot na barra de status do editor exibe uma mensagem.</p>
@@ -210,6 +273,15 @@
             <h3 id="capitulo-8-title">Segurança, IP e Código Público</h3>
           </div>
         </div>
+        <details class="chapter-diagram">
+          <summary><span class="diagram-show-label">Mostrar diagrama</span><span class="diagram-hide-label">Ocultar diagrama</span></summary>
+          <figure>
+            <a class="chapter-diagram-link" href="assets/audiobook/diagrams/cap08_seguranca_ip_codigo_publico.svg" target="_blank" rel="noopener" aria-label="Abrir o diagrama sobre segurança, propriedade intelectual e código público em nova aba">
+              <img src="assets/audiobook/diagrams/cap08_seguranca_ip_codigo_publico.svg" alt="Diagrama do fluxo de uma sugestão pelo filtro de código público, configurações do usuário, proteção de propriedade intelectual, toxicidade e segurança." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Segurança, propriedade intelectual e código público.</figcaption>
+          </figure>
+        </details>
         <div class="audiobook-text">
           <p>Um tema central de segurança é o código público. O filtro de detecção de duplicação do Copilot pode ser configurado no nível da organização para evitar que o Copilot sugira trechos de código disponíveis publicamente. O objetivo principal do filtro é detectar e bloquear sugestões que correspondam a trechos de código público no GitHub, se contiverem cerca de 150 caracteres. O processo funciona executando as sugestões de código por meio de filtros projetados para detectar código público. Além disso, o Copilot filtra sugestões que correspondam ao código de repositórios públicos e implementa salvaguardas para detectar e evitar a sugestão de trechos literais de código público. Antes de a sugestão chegar ao usuário, há verificações adicionais: a correspondência com código público, opcional conforme as configurações, e a compatibilidade com configurações específicas do usuário. Para configurar a detecção de duplicatas, há dois caminhos: Configurações empresariais, depois Copilot, depois Políticas; ou Configurações da organização, depois Copilot, depois Políticas.</p>
           <p>Para ter a ajuda da Microsoft e do GitHub na proteção contra violação de IP, é preciso bloquear as correspondências de código público: a configuração de sugestões que correspondem ao código público deve ser definida como bloqueado.</p>
@@ -225,6 +297,15 @@
             <h3 id="capitulo-9-title">Ética e IA Responsável</h3>
           </div>
         </div>
+        <details class="chapter-diagram">
+          <summary><span class="diagram-show-label">Mostrar diagrama</span><span class="diagram-hide-label">Ocultar diagrama</span></summary>
+          <figure>
+            <a class="chapter-diagram-link" href="assets/audiobook/diagrams/cap09_etica_ia_responsavel.svg" target="_blank" rel="noopener" aria-label="Abrir o diagrama sobre ética e IA responsável em nova aba">
+              <img src="assets/audiobook/diagrams/cap09_etica_ia_responsavel.svg" alt="Diagrama dos riscos do uso de IA, formas de minimizar preconceitos e princípios de justiça e transparência." loading="lazy" decoding="async">
+            </a>
+            <figcaption>Ética e IA responsável.</figcaption>
+          </figure>
+        </details>
         <div class="audiobook-text">
           <p>O uso responsável da IA começa por entender seus riscos. Um deles é que os sistemas de IA podem, por vezes, tomar decisões difíceis de interpretar. Outro é a imprecisão: uma ferramenta de IA generativa pode criar resultados imprecisos porque os dados de treinamento podem conter preconceitos ou inconsistências. Para minimizar preconceitos durante o desenvolvimento da IA, usam-se dados diversos, métricas de justiça e supervisão humana. O desenvolvedor também deve ter cuidado ao usar o Copilot para cálculos matemáticos, evitando depender de retornos baseados em padrões sem verificar a precisão do cálculo.</p>
           <p>Entre os princípios éticos de IA da Microsoft, a justiça, ou Fairness, visa garantir que os sistemas de IA tratem todas as pessoas igualmente. Na operação de uma ferramenta de IA, a justiça pode ser integrada treinando dados e algoritmos de IA para serem livres de preconceitos. Já a transparência é o princípio que enfatiza que os sistemas de IA devem ser compreensíveis e fornecer informações claras sobre como funcionam. Um exemplo: um gerente de mídia social que quer usar IA para filtrar conteúdo aplica a transparência ao fornecer explicações claras sobre os tipos de conteúdo que a IA foi projetada para filtrar e sobre como ela chega à sua conclusão.</p>
@@ -239,6 +320,15 @@
             <h3 id="capitulo-10-title">SDLC: Desenvolvimento, Testes e Produtividade</h3>
           </div>
         </div>
+        <details class="chapter-diagram">
+          <summary><span class="diagram-show-label">Mostrar diagrama</span><span class="diagram-hide-label">Ocultar diagrama</span></summary>
+          <figure>
+            <a class="chapter-diagram-link" href="assets/audiobook/diagrams/cap10_sdlc_desenvolvimento_testes_produtividade.svg" target="_blank" rel="noopener" aria-label="Abrir o diagrama sobre o Copilot no ciclo de desenvolvimento em nova aba">
+              <img src="assets/audiobook/diagrams/cap10_sdlc_desenvolvimento_testes_produtividade.svg" alt="Diagrama das fases de requisitos, design, codificação, refatoração e testes no ciclo de desenvolvimento, com riscos do código gerado." loading="lazy" decoding="async">
+            </a>
+            <figcaption>O Copilot em cada fase do ciclo de vida de desenvolvimento de software.</figcaption>
+          </figure>
+        </details>
         <div class="audiobook-text">
           <p>O Copilot pode ajudar em cada fase do Ciclo de Vida de Desenvolvimento de Software, o SDLC. Na análise de requisitos, ele fornece modelos e trechos de código que auxiliam na documentação dos requisitos. Na fase de design, pode sugerir padrões de design e práticas recomendadas relevantes para o projeto.</p>
           <p>Na escrita do código, o Copilot ajuda os desenvolvedores a reduzir a quantidade de código padrão, o boilerplate, que precisam escrever manualmente, sugerindo trechos de código que podem ser reutilizados em diferentes partes do projeto. Também sugere otimizações para melhorar o desempenho, analisando a base de código e sugerindo algoritmos ou estruturas de dados mais eficientes. Ajuda a escrever documentação, sugerindo resumos ou descrições com base na funcionalidade do código. E reduz a alternância de contexto, porque permite que os desenvolvedores permaneçam na IDE. Na modernização de aplicativos, o Copilot pode sugerir padrões de programação modernos com base no código do desenvolvedor. Para gerar dados de amostra, um método é usar a capacidade do Copilot de criar informações fictícias a partir de padrões nos dados de treinamento; outro é aproveitar suas sugestões para criar dados com base na documentação da API no repositório.</p>

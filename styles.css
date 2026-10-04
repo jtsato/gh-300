@@ -839,7 +839,114 @@ mark {
   border-top: 1px solid var(--line);
 }
 
+.chapter-diagram {
+  max-width: 900px;
+  margin: 0 0 30px;
+  padding: 0;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+
+.chapter-diagram summary {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 14px;
+  color: var(--accent-ink);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  list-style: none;
+  user-select: none;
+}
+
+.chapter-diagram summary::-webkit-details-marker {
+  display: none;
+}
+
+.diagram-hide-label {
+  display: none;
+}
+
+.chapter-diagram[open] .diagram-show-label {
+  display: none;
+}
+
+.chapter-diagram[open] .diagram-hide-label {
+  display: inline;
+}
+
+.chapter-diagram summary::before {
+  content: "+";
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.chapter-diagram summary:hover {
+  background: var(--accent-soft);
+}
+
+.chapter-diagram summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.chapter-diagram[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+
+.chapter-diagram[open] summary::before {
+  content: "−";
+}
+
+.chapter-diagram figure {
+  margin: 12px;
+}
+
+.chapter-diagram-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.chapter-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform .3s ease;
+}
+
+.chapter-diagram-link:hover img {
+  transform: scale(1.012);
+}
+
+.chapter-diagram-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.chapter-diagram figcaption {
+  margin-top: 10px;
+  color: var(--ink-3);
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
 .audiobook-carousel {
+
   position: relative;
 }
 
@@ -1140,6 +1247,23 @@ mark {
     padding: 18px;
   }
 
+  .chapter-diagram {
+    margin-bottom: 24px;
+  }
+
+  .chapter-diagram figure {
+    margin: 8px;
+  }
+
+  .chapter-diagram summary {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .chapter-diagram figcaption {
+    font-size: 11px;
+  }
+
   .carousel-controls {
     gap: 8px;
   }
@@ -1250,6 +1374,9 @@ mark {
   .audiobook-carousel .audiobook-chapter:first-child { page-break-before: auto; }
   .carousel-toolbar, .carousel-controls, .chapter-menu-backdrop { display: none !important; }
   .audiobook-carousel .chapter-nav { display: none !important; }
+  .chapter-diagram { display: block !important; }
+  .chapter-diagram summary { display: none !important; }
+  .chapter-diagram figure { display: block !important; }
   .q-card, .cs-card { box-shadow: none; break-inside: avoid; }
   .container { max-width: none; padding: 0; }
 }
