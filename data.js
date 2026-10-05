@@ -14,7 +14,7 @@ const CHAPTERS = [
 
 const QUESTIONS = [
   { n: 1, ch: "gestao", q: `Que tipo de insights a API de métricas de uso do GitHub Copilot pode fornecer para ajudar a avaliar a eficácia do GitHub Copilot?`, a: [["B", "A API pode rastrear o número de sugestões de código aceitas e usadas na organização."], ["E", "A API pode fornecer métricas de aceitação de sugestões específicas do Copilot Chat."]] },
-  { n: 2, ch: "fundamentos", q: `Qual método pode ser usado para interagir com GitHub Copilot?`, a: [["D", "De um navegador da web em https://github.copilot.com"]] },
+  { n: 2, ch: "fundamentos", q: `Qual método pode ser usado para interagir com GitHub Copilot?`, a: [["D", "De um navegador da web em https://copilot.github.com"]] },
   { n: 3, ch: "planos", q: `Como o GitHub Copilot Individual é cobrado?`, a: [["A", "Mensalmente como assinatura"], ["B", "Anualmente como uma assinatura"]] },
   { n: 4, ch: "sdlc", q: `Como o GitHub Copilot pode ajudar os desenvolvedores durante a fase de análise de requisitos do Ciclo de Vida de Desenvolvimento de Software (SDLC)?`, a: [["B", "Fornecendo modelos e trechos de código que auxiliam na documentação de requisitos."]] },
   { n: 5, ch: "gestao", q: `Qual é a maneira correta de excluir arquivos específicos do uso do GitHub Copilot Business durante sugestões de código?`, a: [["B", "Adicione os arquivos específicos a um arquivo copilot.ignore"]] },

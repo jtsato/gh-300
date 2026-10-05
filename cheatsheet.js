@@ -120,7 +120,7 @@ const CHEATSHEET = [
       { k: "Proxy", v: "Serviço de proxy hospedado no Microsoft Azure." },
       { k: "Técnica FIM", v: "Fill-In-the-Middle considera prefixo E sufixo, preenchendo o meio com mais precisão." },
       { k: "Treinamento", v: "Sugere trechos que refletem as práticas mais comuns nos dados; pode sugerir sintaxe/recursos obsoletos se presentes no treinamento." },
-      { k: "Interação", v: "Também via navegador em https://github.copilot.com" }
+      { k: "Interação", v: "Também via navegador em https://copilot.github.com" }
     ]
   },
   {
